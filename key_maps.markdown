@@ -30,3 +30,9 @@
 
 ### Generation
 * `[Alt] + [Enter]` - Generate ...
+
+### Search
+* `[Ctrl] + H` - find in path
+* `[⌘] + [Shift] + F` - find in path (OS X Only)
+* `[⌘/Ctrl] + K` - find word at caret
+* `F3` - find next
