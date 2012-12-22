@@ -1,0 +1,33 @@
+# python
+*.py[co]
+
+# IDE
+.idea/
+.project/
+*.iml
+
+# Mac OS X junk
+.AppleDouble
+.DS_Store
+Icon?
+.Spotlight-V100
+.Trashes
+
+
+# Windows junk
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+#virtualenv
+bin/
+build/
+include/
+lib/
+local/
+share/
+.Python
+.venv
+
+#trial
+_trial_temp/
