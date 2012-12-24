@@ -28,6 +28,7 @@ local/
 share/
 .Python
 .venv
+pyvenv.cfg
 
 #trial
 _trial_temp/
