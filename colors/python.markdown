@@ -22,6 +22,7 @@ Based on Monokai from PyCharm.
 * keyword - F92672
 * build-in names - 66D9EF
 * predefined names - 66D9EF
+* predefined item - 80E274
 * self - 94558D
 
 * strings (bytes) - FFD605
