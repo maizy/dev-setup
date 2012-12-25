@@ -29,7 +29,8 @@
 * `F2` - rename
 
 ### Generation
-* `[Alt] + [Enter]` - Generate ...
+* `[⌘/Alt] + [i]` - Generate ...
+* `[⌘/Alt] + [Enter]` - Show intentions actions
 
 ### Search
 * `[Ctrl] + H` - find in path

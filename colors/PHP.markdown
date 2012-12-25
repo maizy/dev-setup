@@ -3,8 +3,8 @@
 ### Fonts
 
 * Anti-aliased
-* Lucida Sanf Typewriter, 16pt, line spacing 1.0 (OS X)
-* ?? (Linux)
+* OS X: Lucida Sanf Typewriter, 16pt, line spacing 1.0
+* Linux: Monospaced, 16pt, line spacing 1.0
 
 ### Colors
 
