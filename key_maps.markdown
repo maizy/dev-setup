@@ -24,7 +24,7 @@
 * `[⌘/Ctrl] + [key left of z]`, `[⌘/Ctrl] + [key left of 1]` - VCS Popup
 * `[⌘] + B`, `[Ctrl] + B` - compare with Base repository version
 * `[⌘] + G`, `[Ctrl] + G` - compare with the same repository version
-* Linux: `[Alt] + F`, OS X: `???` - fetch
+* Linux: `[Alt] + F`, OS X: `[Ctrl] + F` - fetch
 
 ### Refactoring
 * `F2` - rename
