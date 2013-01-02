@@ -4,12 +4,15 @@
 * mc
 * nmap
 * python27
-* 
+* ... TODO 
 * python33
-*
+* ... TODO
+* git-core +bash_completion +doc +svn +credential_osxkeychain +python27
 
 ## Apps
 
 * IntelliJ IDEA 
 * Sublime Text 2
-* Evernote
+* Dropbox
+* Evernote (AppStore)
+* Paula (AppStore)
