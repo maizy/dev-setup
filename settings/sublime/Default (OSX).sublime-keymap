@@ -1,0 +1,14 @@
+[
+        { "keys": ["super+e"], 
+            "command": "run_macro_file", 
+            "args": {"file": "Packages/Default/Delete Line.sublime-macro"} 
+        },
+
+        { "keys": ["super+d"], 
+            "command": "duplicate_line" },
+
+        { "keys": ["super+shift+d"], 
+            "command": "complete",
+            "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] 
+        }
+]
