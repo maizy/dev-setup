@@ -24,7 +24,6 @@ export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 export CLICOLOR=1
 
-alias 'port'='port -v'
 alias 'll'='ls -la'
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
@@ -37,14 +36,16 @@ export PROJECT_HOME=~/Dev/venv_projects
 export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python2.7
 export VIRTUALENVWRAPPER_VIRTUALENV=/opt/local/bin/virtualenv-2.7
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--distribute --python=/opt/local/bin/python2.7'
-source /opt/local/bin/virtualenvwrapper.sh-2.7
 
-has_virtualenv() {
-    if [ -e .venv ]; then
-        workon `cat .venv`
-    fi
-}
-venv_cd () {
-    cd "$@" && has_virtualenv
-}
-alias cd="venv_cd"
+if [ -f '/opt/local/bin/virtualenvwrapper.sh-2.7' ];then
+    source /opt/local/bin/virtualenvwrapper.sh-2.7
+    has_virtualenv() {
+        if [ -e .venv ]; then
+            workon `cat .venv`
+        fi
+    }
+    venv_cd () {
+        cd "$@" && has_virtualenv
+    }
+    alias cd="venv_cd"
+fi 
