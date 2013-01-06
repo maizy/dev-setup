@@ -20,6 +20,7 @@ Thumbs.db
 Desktop.ini
 
 #virtualenv
+venv/
 bin/
 build/
 include/
