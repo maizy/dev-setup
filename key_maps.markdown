@@ -18,6 +18,7 @@
 * `[⌘/Ctrl] + →` - forward
 * `[⌘/Ctrl] + [Shift] + N` - Go to file
 * `[⌘/Ctrl] + N` - Go to class
+* `[⌘/Ctrl] + L` - Go to line
 
 ### VCS
 
