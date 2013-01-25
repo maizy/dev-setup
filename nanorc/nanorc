@@ -1,0 +1,5 @@
+unset casesensitive
+set const
+set historylog
+set tabsize 4
+set tabstospaces
