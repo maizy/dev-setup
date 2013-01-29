@@ -89,7 +89,7 @@ menubar_visible=1
 free_space=1
 horizontal_split=0
 vertical_equal=1
-left_panel_size=52
+left_panel_size=35
 horizontal_equal=1
 top_panel_size=1
 
@@ -98,7 +98,7 @@ timeformat_recent=%b %e %H:%M
 timeformat_old=%b %e  %Y
 ftp_proxy_host=gate
 ftpfs_password=anonymous@
-display_codepage=ASCII
+display_codepage=UTF-8
 source_codepage=Other_8_bit
 autodetect_codeset=
 clipboard_store=
@@ -108,6 +108,8 @@ clipboard_paste=
 base_color=
 xterm-color=
 color_terminals=
+
+xterm-256color=
 
 [Panels]
 simple_swap=false
@@ -128,6 +130,9 @@ filetype_mode=true
 permission_mode=false
 torben_fj_mode=false
 quick_search_mode=2
+
+[HotlistConfig]
+expanded_view_of_groups=0
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print
