@@ -12,4 +12,4 @@ env.ROOT_DIR = path.abspath(path.dirname(__file__))
 if env.ROOT_DIR not in sys.path:
     sys.path.append(env.ROOT_DIR)
 
-import netstat
+import netstat, service
