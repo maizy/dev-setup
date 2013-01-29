@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SCRIPT_PATH=$(cd ${0%/*} && echo $PWD/${0##*/})
+REAL_PATH=`python -c 'import os,sys;print os.path.realpath(sys.argv[1])' "${SCRIPT_PATH}"`
+ROOT=`dirname "$REAL_PATH"`
+ROOT=`dirname "$ROOT"`
+FABRIC_ROOT="${ROOT}/fabric"
+
+cd "${FABRIC_ROOT}"
+pwd
+~/Library/Python/2.7/bin/fab $@
