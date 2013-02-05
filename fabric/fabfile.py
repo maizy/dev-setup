@@ -4,7 +4,7 @@
 import sys
 from os import path
 
-from fabric.api import local, env, lcd
+from fabric.api import local, env, lcd, task, settings
 
 try:
     import hh_kovalev.fabric as hh_fabric
@@ -22,3 +22,8 @@ if hh:
     import hh_kovalev.fabric.dev as hh_dev
 
 import netstat, service
+
+@task
+def pep8(*paths):
+    with settings(warn_only=True):
+        local('pep8 --repeat --show-source --statistics --ignore=E501 ' + ' '.join(paths))

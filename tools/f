@@ -6,6 +6,4 @@ ROOT=`dirname "$REAL_PATH"`
 ROOT=`dirname "$ROOT"`
 FABRIC_ROOT="${ROOT}/fabric"
 
-cd "${FABRIC_ROOT}"
-pwd
-~/Library/Python/2.7/bin/fab $@
+~/Library/Python/2.7/bin/fab "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
