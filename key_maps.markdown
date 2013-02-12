@@ -26,6 +26,8 @@
 * `[⌘] + B`, `[Ctrl] + B` - compare with Base repository version
 * `[⌘] + G`, `[Ctrl] + G` - compare with the same repository version
 * Linux: `[Alt] + F`, OS X: `[Ctrl] + F` - fetch
+* `[⌘/Ctrl] + [R]` - rebase
+* `[⌘/Ctrl] + [A]` - annotate
 
 ### Refactoring
 * `F2` - rename
