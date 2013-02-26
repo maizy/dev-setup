@@ -41,3 +41,6 @@
 * `[⌘] + [Shift] + F` - find in path (OS X Only)
 * `[⌘/Ctrl] + K` - find word at caret
 * `F3` - find next
+
+### Tabs
+* `[Ctrl] + P` - pyn tab

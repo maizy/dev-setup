@@ -19,7 +19,7 @@ if env.ROOT_DIR not in sys.path:
 
 if hh:
     hh_fabric.init_env()
-    import hh_kovalev.fabric.dev as hh_dev
+    from hh_kovalev.fabric.exports import *
 
 import netstat, service
 
