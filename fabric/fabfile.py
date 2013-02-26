@@ -26,4 +26,6 @@ import netstat, service
 @task
 def pep8(*paths):
     with settings(warn_only=True):
+        if not paths:
+            paths = ['./']
         local('pep8 --repeat --show-source --statistics --ignore=E501 ' + ' '.join(paths))
