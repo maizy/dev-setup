@@ -11,6 +11,9 @@
 * `[⌘/Ctrl] + [Shift] + V` - Smart paste
 * `[⌘/Ctrl] + Z` - undo
 * `[⌘/Ctrl] + Y`, `[⌘/Ctrl] + [Shift] + X` - redo
+* `[Ctrl] + W` - show/hide whitespaces
+* `[Ctrl] + U` - split
+* `[Ctrl] + [Shift] + U` - unsplit all
 
 ### Navigation
 

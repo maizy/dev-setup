@@ -34,12 +34,12 @@ PS1='\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 export WORKON_HOME=~/Dev/venv
 export PROJECT_HOME=~/Dev/venv_projects
-export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python2.7
-export VIRTUALENVWRAPPER_VIRTUALENV=/opt/local/bin/virtualenv-2.7
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--distribute --python=/opt/local/bin/python2.7'
+export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python2.6
+export VIRTUALENVWRAPPER_VIRTUALENV=/opt/local/bin/virtualenv-2.6
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--distribute --python=/opt/local/bin/python2.6'
 
-if [ -f '/opt/local/bin/virtualenvwrapper.sh-2.7' ];then
-    source /opt/local/bin/virtualenvwrapper.sh-2.7
+if [ -f '/opt/local/bin/virtualenvwrapper.sh-2.6' ];then
+    source /opt/local/bin/virtualenvwrapper.sh-2.6
     has_virtualenv() {
         if [ -e .venv ]; then
             workon `cat .venv`
