@@ -41,6 +41,7 @@ def pep8l(conf_file):
         line = line.rstrip()
         if line[0] == '#':
             cwd = line[1:]
+            print('cd {0}'.format(cwd))
             continue
         with lcd(cwd):
             pep8(line)
