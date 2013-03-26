@@ -1,0 +1,11 @@
+#!/bin/bash
+# Clean os x junk files
+
+echo "Are you sure to clean OS X junk from ${PWD} ? [n/Y]"
+
+read ACK
+if [ $ACK == "Y" -o $ACK == "y" ]; then
+	find . -iname '.AppleDouble' -exec rm -r '{}' \;
+	find . -iname '.DS_Store' -exec rm -r '{}' \;
+
+fi

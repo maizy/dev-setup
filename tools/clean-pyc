@@ -1,0 +1,10 @@
+#!/bin/bash
+# Clean *.pyc files
+
+echo "Are you sure to clean *.pyc files from ${PWD} ? [n/Y]"
+
+read ACK
+if [ $ACK == "Y" -o $ACK == "y" ]; then
+	find ./ -iname '*.pyc' -exec rm {} \;
+
+fi
