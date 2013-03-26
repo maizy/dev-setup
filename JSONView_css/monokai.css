@@ -1,0 +1,77 @@
+/** 
+For JSONView Google Chrome plugin:
+https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc
+
+Author: Nikita Kovaliov
+*/
+body {
+  white-space: pre;
+  font-family: 'Lucida', monospace;
+  font-size: 16px;
+  background: #272822;
+  color: #fff;
+}
+
+a {
+  color: #AE81FF;
+}
+.property {
+  color: #FDA5FF;
+}
+
+.type-null {
+  color: gray;
+}
+
+.type-boolean {
+  color: #F92672;
+}
+
+.type-number {
+  color: #AE81FF;
+}
+
+.type-string {
+  color: #E6DB74;
+}
+
+.callback-function {
+  color: gray;
+}
+
+.collapser:after {
+  content: "-";
+}
+
+.collapsed > .collapser:after {
+  content: "+";
+}
+
+.ellipsis:after {
+  content: " … ";
+}
+
+.ellipsis {
+  color: #F92672;
+}
+
+.collapsible {
+  margin-left: 2em;
+}
+
+.hoverable {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 2px;
+}
+
+.hovered {
+  background-color: #49483E;  
+}
+
+.collapser {
+  padding-right: 6px;
+  padding-left: 6px;
+}
