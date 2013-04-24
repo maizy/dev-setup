@@ -17,7 +17,7 @@ shopt -s cmdhist
 
 
 # venv
-export WORKON_HOME=~/Dev
+export WORKON_HOME=~/Dev/venv
 export PROJECT_HOME=~/Dev/venv_projects
 export VIRTUALENVWRAPPER_HOOK_DIR=~/Dev/venv_hooks
 
