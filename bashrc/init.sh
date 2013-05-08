@@ -21,6 +21,9 @@ export WORKON_HOME=~/Dev/venv
 export PROJECT_HOME=~/Dev/venv_projects
 export VIRTUALENVWRAPPER_HOOK_DIR=~/Dev/venv_hooks
 
+# go
+export GOPATH="${HOME}/Dev/go_ext:${HOME}/Dev/go"
+
 # locale
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
