@@ -6,4 +6,8 @@ ROOT=`dirname "$REAL_PATH"`
 ROOT=`dirname "$ROOT"`
 FABRIC_ROOT="${ROOT}/fabric"
 
-~/Library/Python/2.7/bin/fab "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
+if [ "$1" == "" ];then
+    ~/Library/Python/2.7/bin/fab "--fabfile=${FABRIC_ROOT}/fabfile.py" --list
+else
+    ~/Library/Python/2.7/bin/fab "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
+fi
