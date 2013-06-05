@@ -39,6 +39,8 @@ def pep8l(conf_file):
     cwd = os.getcwd()
     for line in lines:
         line = line.rstrip()
+        if len(line) == 0:
+            continue
         if line[0] == '#':
             cwd = line[1:]
             print('cd {0}'.format(cwd))
