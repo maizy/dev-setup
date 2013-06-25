@@ -1,7 +1,9 @@
 # _*_ coding: utf-8 _*_
 # Copyright (c) Nikita Kovaliov, maizy.ru, 2013
+from __future__ import print_function, absolute_import, unicode_literals
 
-from fabric.api import task, local, env
+from fabric.api import task, local
+
 
 @task
 def tcp():

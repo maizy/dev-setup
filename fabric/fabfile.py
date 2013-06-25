@@ -1,12 +1,10 @@
 # _*_ coding: utf-8 _*_
 # Copyright (c) Nikita Kovaliov, maizy.ru, 2013
-from __future__ import unicode_literals, print_function
-
+from __future__ import unicode_literals, print_function, absolute_import
 import sys
 from os import path
-import os
 
-from fabric.api import local, env, lcd, task, settings
+from fabric.api import env
 
 try:
     import hh_kovalev.fabric as hh_fabric
@@ -14,36 +12,17 @@ try:
 except ImportError:
     hh = False
 
+# settings
 env.ROOT_DIR = path.abspath(path.dirname(__file__))
 env.PEP8_LIST_DIR = path.abspath(path.expanduser('~/Documents/Pep8_lists'))
-
+env.GIT_PRESERVE_BRANCHES = ['master', 'release-candidate']
 if env.ROOT_DIR not in sys.path:
     sys.path.append(env.ROOT_DIR)
 
 if hh:
     hh_fabric.init_env()
+    del hh_fabric
     from hh_kovalev.fabric.exports import *
 
-import netstat, service
-
-@task
-def pep8(*paths):
-    with settings(warn_only=True):
-        if not paths:
-            paths = ['./']
-        local('pep8 --repeat --show-source --statistics --max-line-length=120 ' + ' '.join(paths))
-
-@task
-def pep8l(conf_file):
-    lines = open(path.join(env.PEP8_LIST_DIR, conf_file)).readlines()
-    cwd = os.getcwd()
-    for line in lines:
-        line = line.rstrip()
-        if len(line) == 0:
-            continue
-        if line[0] == '#':
-            cwd = line[1:]
-            print('cd {0}'.format(cwd))
-            continue
-        with lcd(cwd):
-            pep8(line)
+from maizy_f import netstat, git, service
+from maizy_f.root import *

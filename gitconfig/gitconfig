@@ -7,31 +7,20 @@
     br = branch
     back = reset --hard HEAD^
     softback = reset --soft HEAD^
+    rohard = "!sh -c \"git reset --hard origin/${1}\"; echo '' >/dev/null"
+    rhard = reset --hard
     ci = commit
     st = status
     su = submodule update
     sum = log --pretty -n 1 --color
     summary = log --pretty -n 1 --color
-    glog = !git --no-pager log --format=oneline-author --graph -n 30
+    glog = !git --no-pager log --format=oneline-author --graph -n 15
     flog = !git --no-pager log --format=full-log --graph --date=short
     pusht = push --tags
 
 [pretty]
     oneline-author = %Cred%h %Cblue%an %Creset%s
     full-log = %w(80,0,15)%Cred%h %Cblue%an (%ad) %Creset%n%s
-
-[merge]
-	tool = diffmerge
-
-[mergetool "diffmerge"]
-	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
-	trustExitCode = true
-
-[diff]
-	tool = diffmerge
-
-[difftool "diffmerge"]
-	cmd = diffmerge $LOCAL $REMOTE
 
 [push]
 	default = upstream
