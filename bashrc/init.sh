@@ -34,7 +34,7 @@ export LC_ALL="en_US.UTF-8"
 # git
 function trust_me_git
 {
-    CUR_BR=`git br | grep -r '^\*\ .*$' | awk '{print $2}'`
+    CUR_BR=`git rev-parse --abbrev-ref HEAD`
     git fetch
     git clean -df
     git co -f
