@@ -6,5 +6,5 @@ echo "Are you sure to clean *.pyc files from ${PWD} ? [n/Y]"
 read ACK
 if [[ $ACK == "Y" || $ACK == "y" || $ACK == "" ]]; then
 	find ./ -iname '*.pyc' -exec rm {} \;
-
+    find ./ -type d -iname '__pycache__' -exec rm -r {} \; 2>/dev/null
 fi
