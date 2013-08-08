@@ -15,5 +15,7 @@ a.insert(0, b)
 a.insert(1, b2)
 b.insert(0, c)
 
-print ('add a, b, b2, c\n\na:')
-p(a)
+t = a.getroottree()
+
+print ('add t + a, b, b2, c\n\na:')
+p(t)
