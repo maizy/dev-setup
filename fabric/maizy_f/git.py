@@ -45,3 +45,9 @@ def rm_merged(branch=None):
     else:
         print('Canceled')
         return False
+
+@task
+def cip(all='true'):
+    all = all.lower() in ('true', '1', 't', 'y')
+    local('git commit' + (' --all' if all else ''))
+    local('git push')
