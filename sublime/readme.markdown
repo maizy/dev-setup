@@ -1,3 +1,0 @@
-## Path
-
-~/.config/mc/*
