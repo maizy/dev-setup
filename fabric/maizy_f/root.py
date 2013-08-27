@@ -17,7 +17,12 @@ def pep8(*paths):
 
 
 @task
-def pep8l(conf_file):
+def pep8l(*args):
+    conf_file = args[0] if len(args) > 0 else None
+    if conf_file is None or conf_file == '?':
+        print('Avalable lists:\n * {0}'.format('\n * '.join(os.listdir(env.PEP8_LIST_DIR))))
+        return
+
     lines = open(path.join(env.PEP8_LIST_DIR, conf_file)).readlines()
     cwd = os.getcwd()
     for line in lines:
