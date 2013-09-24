@@ -24,5 +24,5 @@ if hh:
     del hh_fabric
     from hh_kovalev.fabric.exports import *
 
-from maizy_f import netstat, git, service
+from maizy_f import netstat, git, service, fs
 from maizy_f.root import *
