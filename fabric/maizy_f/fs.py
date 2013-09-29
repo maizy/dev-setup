@@ -14,8 +14,8 @@ from fabric.api import task, prompt
 def rand_rename(path='.'):
     rpath = os.path.realpath(path)
     files = [f for f in os.listdir(rpath) if not f.startswith('.')]
-    if not prompt('Are you sure to randomize {n} files in {path} ? [N/y]'
-                  .format(path=rpath, n=len(files))) in ('y', 'Y'):
+    print('Are you sure to randomize {n} files in {path} ?'.format(path=rpath, n=len(files)))
+    if not prompt('[N/y]') in ('y', 'Y'):
         print('Aborted by user', file=sys.stderr)
         return False
 
