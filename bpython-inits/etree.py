@@ -8,6 +8,7 @@ def p(elem):
 
 a = etree.Element('a')
 b = etree.Element('b', prop='123', tprop='abc')
+b.tail = 'aim tail'
 b2 = etree.Element('b', prop='456', tprop='def')
 c = etree.Element('c')
 
