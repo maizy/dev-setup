@@ -1,13 +1,13 @@
 #!/bin/bash
 
 SCRIPT_PATH=$(cd ${0%/*} && echo $PWD/${0##*/})
-REAL_PATH=`/opt/local/bin/python2.7 -c 'import os,sys;print os.path.realpath(sys.argv[1])' "${SCRIPT_PATH}"`
+REAL_PATH=`python2.7 -c 'import os,sys;print os.path.realpath(sys.argv[1])' "${SCRIPT_PATH}"`
 ROOT=`dirname "$REAL_PATH"`
 ROOT=`dirname "$ROOT"`
 FABRIC_ROOT="${ROOT}/fabric"
 
 if [ "$1" == "" ];then
-    ~/Library/Python/2.7/bin/fab "--fabfile=${FABRIC_ROOT}/fabfile.py" --list
+    fab-2.7 "--fabfile=${FABRIC_ROOT}/fabfile.py" --list
 else
-    ~/Library/Python/2.7/bin/fab "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
+    fab-2.7 "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
 fi
