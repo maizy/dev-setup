@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # PATHs
-export PATH=/opt/local/bin:/opt/local/sbin:/Users/$USER/bin:$PATH
+export PATH=/Users/$USER/bin:/opt/local/bin:/opt/local/sbin:$PATH
 
 
 # editors

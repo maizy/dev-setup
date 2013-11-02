@@ -7,7 +7,7 @@ ROOT=`dirname "$ROOT"`
 FABRIC_ROOT="${ROOT}/fabric"
 
 if [ "$1" == "" ];then
-    fab-2.7 "--fabfile=${FABRIC_ROOT}/fabfile.py" --list
+    fab-2.7 --colorize-errors "--fabfile=${FABRIC_ROOT}/fabfile.py" --list
 else
-    fab-2.7 "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
+    fab-2.7 --colorize-errors "--fabfile=${FABRIC_ROOT}/fabfile.py" $@
 fi
