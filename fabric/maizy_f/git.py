@@ -46,6 +46,7 @@ def rm_merged(branch=None):
         print('Canceled')
         return False
 
+
 @task
 def cip(all='true'):
     all = all.lower() in ('true', '1', 't', 'y')

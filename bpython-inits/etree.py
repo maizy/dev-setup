@@ -1,7 +1,8 @@
 # _*_ coding: utf-8 _*_
-# Copyright (c) Nikita Kovaliov, HeadHunter.ru, 2013
+from __future__ import print_function, unicode_literals
 
 from lxml import etree
+
 
 def p(elem):
     print(etree.tostring(elem, pretty_print=True))
