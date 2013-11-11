@@ -27,3 +27,6 @@
 
 [core]
 	editor = nano
+
+[color]
+    ui = true
