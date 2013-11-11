@@ -9,6 +9,10 @@ export EDITOR='nano'
 export VISUAL='nano'
 export SVN_EDITOR='nano'
 
+# PKG alias
+alias pkgs='apt-cache search'
+alias pkgi='sudo apt-get install'
+
 
 # PS1
 if [ "$color_prompt" = yes ]; then
