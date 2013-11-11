@@ -4,6 +4,7 @@
 #
 
 sudo port install git-core +bash_completion +doc +svn +credential_osxkeychain +python27
+sudo port install gnuplot -x11 -qt
 sudo port install \
     autoconf \
     automake \

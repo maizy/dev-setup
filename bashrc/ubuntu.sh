@@ -12,6 +12,7 @@ export SVN_EDITOR='nano'
 # PKG alias
 alias pkgs='apt-cache search'
 alias pkgi='sudo apt-get install'
+alias pkginfo='apt-cache show'
 
 
 # PS1

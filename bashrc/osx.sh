@@ -6,6 +6,7 @@ export PATH=/Users/$USER/bin:/opt/local/bin:/opt/local/sbin:$PATH
 # PKG alias
 alias pkgs='port search'
 alias pkgi='sudo port install'
+alias pkginfo='port info'
 
 
 # editors
