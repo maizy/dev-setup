@@ -53,3 +53,15 @@ _cdd_complete () {
 
 complete -o nospace -F _cdd_complete -S/ cdd
 
+
+# f complition
+# based on http://www.evans.io/posts/bash-tab-completion-fabric-ubuntu/
+_f_completion()
+{
+    COMPREPLY=() 
+    local cur tasks
+    tasks=$(f --shortlist 2>/dev/null)
+    _get_comp_words_by_ref cur
+    COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
+}
+complete -F _f_completion f
