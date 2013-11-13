@@ -88,6 +88,7 @@ sudo port install \
     rsync \
     sqlite3 \
     subversion \
+    terminal-notifier \
     tig \
     virtualenv_select \
     watch \
