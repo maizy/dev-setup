@@ -1,10 +1,11 @@
 {
+	"auto_match_enabled": true,
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
 	"font_size": 16.0,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
-	"translate_tabs_to_spaces": true,
-    "auto_match_enabled": true
+	"translate_tabs_to_spaces": true
 }
