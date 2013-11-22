@@ -35,8 +35,8 @@ tt,
   line-height: 21px !important;
 }
 
-.comment-content code,
-.comment-content pre {
+/** simple inline code blocks (without hightlight) */
+.comment-content pre code {
   color: #f8f8f2 !important;
 }
 
