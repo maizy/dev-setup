@@ -8,19 +8,20 @@ from fabric.api import env
 
 
 def init(env):
-    ssh_dir = path.abspath(path.expanduser('~/.ssh'))
-    if isinstance(env.key_filename, (list, tuple)):
-        keys = list(env.key_filename)
-    elif env.key_filename is not None:
-        keys = [env.key_filename]
-    else:
-        keys = []
+    if hasattr(env, 'POSSIBLE_KEYS') and env.POSSIBLE_KEYS:
+        ssh_dir = path.abspath(path.expanduser('~/.ssh'))
+        if isinstance(env.key_filename, (list, tuple)):
+            keys = list(env.key_filename)
+        elif env.key_filename is not None:
+            keys = [env.key_filename]
+        else:
+            keys = []
 
-    for key in env.POSSIBLE_KEYS:
-        key_path = path.join(ssh_dir, key)
-        if path.isfile(key_path):
-            keys.append(key_path)
-    env.key_filename = keys
+        for key in env.POSSIBLE_KEYS:
+            key_path = path.join(ssh_dir, key)
+            if path.isfile(key_path):
+                keys.append(key_path)
+        env.key_filename = keys
 
 try:
     import hh_kovalev.fabric as hh_fabric
@@ -32,8 +33,9 @@ except ImportError:
 env.ROOT_DIR = path.abspath(path.dirname(__file__))
 env.PEP8_LIST_DIR = path.abspath(path.expanduser('~/Documents/Pep8_lists'))
 env.GIT_PRESERVE_BRANCHES = ['master', 'release-candidate']
-env.POSSIBLE_KEYS = ['stage_rsa', 'id_rsa']
+env.POSSIBLE_KEYS = []
 env.use_ssh_config = True
+env.forward_agent = True
 env.disable_known_hosts = True  # workarond for veeeery slow ssh connection in OS X
 if env.ROOT_DIR not in sys.path:
     sys.path.append(env.ROOT_DIR)
