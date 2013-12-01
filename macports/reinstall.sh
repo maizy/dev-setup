@@ -50,6 +50,10 @@ sudo port install \
     pcre \
     popt \
     python26 \
+    python27 \
+    python32 \
+    python33 \
+    py26-cython \
     py26-docutils \
     py26-gobject \
     py26-lxml \
@@ -60,8 +64,8 @@ sudo port install \
     py26-virtualenv \
     py26-virtualenv-clone \
     py26-virtualenvwrapper \
-    python27 \
     py27-bpython \
+    py27-cython \
     py27-ipython \
     py27-libxml2 \
     py27-nose \
@@ -73,12 +77,12 @@ sudo port install \
     py27-virtualenv \
     py27-virtualenv-clone \
     py27-virtualenvwrapper \
-    python32 \
+    py32-cython \
     py32-lxml \
     py32-pip \
     py32-setuptools \
     py32-virtualenv \
-    python33 \
+    py33-cython \
     py33-pip \
     py33-setuptools \
     py33-virtualenv \
