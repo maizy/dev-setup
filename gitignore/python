@@ -21,15 +21,6 @@ Desktop.ini
 
 #virtualenv
 venv/
-bin/
-build/
-include/
-lib/
-local/
-share/
-.Python
-.venv
-pyvenv.cfg
 
 #trial
 _trial_temp/

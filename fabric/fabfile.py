@@ -29,6 +29,12 @@ try:
 except ImportError:
     hh = False
 
+try:
+    import smaizy.fabric as smaizy_fabric
+    maizy = True
+except ImportError:
+    maizy = False
+
 # settings
 env.ROOT_DIR = path.abspath(path.dirname(__file__))
 env.PEP8_LIST_DIR = path.abspath(path.expanduser('~/Documents/Pep8_lists'))
@@ -47,6 +53,11 @@ if hh:
     hh_fabric.init_env()
     del hh_fabric
     from hh_kovalev.fabric.exports import *
+
+if maizy:
+    smaizy_fabric.init_env()
+    del smaizy_fabric
+    from smaizy.fabric.exports import *
 
 from maizy_f import netstat, git, service, fs, r
 from maizy_f.root import *
