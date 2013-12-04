@@ -35,10 +35,6 @@ tt,
   line-height: 21px !important;
 }
 
-/** simple inline code blocks (without hightlight) */
-.comment-content pre code {
-  color: #f8f8f2 !important;
-}
 
 .highlight,
 .highlight .err,
@@ -234,6 +230,16 @@ code, pre {
   width: 115% !important;
   display: block;
   margin-left: -12%;
+}
+
+/** simple inline code blocks (without hightlight) */
+.comment-content pre {
+  background: #f8f8f8 !important;
+}
+
+/** inline code blocks with hightlight */
+.comment-content .highlight pre {
+  background: #23241f !important;
 }
 
 /** all git hub container width */
