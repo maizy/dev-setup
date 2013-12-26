@@ -1,0 +1,24 @@
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
+    IdentityFile ~/.ssh/github_hh
+
+Host gh
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
+    IdentityFile ~/.ssh/github_hh
+
+Host bitbucket.org
+    HostName bitbucket.org
+    User git
+    IdentityFile ~/.ssh/bitbucket
+    IdentityFile ~/.ssh/bitbucket_hh
+
+Host bb
+    HostName bitbucket.org
+    User git
+    IdentityFile ~/.ssh/bitbucket
+    IdentityFile ~/.ssh/bitbucket_hh
+
