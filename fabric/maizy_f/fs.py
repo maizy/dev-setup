@@ -6,8 +6,11 @@ import os
 import sys
 import random
 import time
+from functools import partial
 
-from fabric.api import task, prompt
+from fabric.api import task, prompt, local
+from fabric.colors import magenta
+note = partial(magenta, bold=True)
 
 
 @task
@@ -38,3 +41,17 @@ def rand_rename(path='.'):
     os.rmdir(tmp_dir)
     print('OK')
     return True
+
+
+@task
+def unzip_all(source_dir='.', dest_dir='.'):
+    files = sorted([f for f in os.listdir(source_dir) if f.endswith('.zip')])
+    for i, zip_file in enumerate(files, start=1):
+        res_dir = os.path.join(dest_dir, zip_file[:-len('.zip')])
+        print(note('{i:2d}/{t:2d} {f} => {r}'.format(i=i, t=len(files), f=zip_file, r=res_dir)))
+        if os.path.exists(res_dir):
+            print('Skip, unzipped before')
+            continue
+        zip_path = os.path.join(source_dir, zip_file)
+        os.makedirs(res_dir, mode=0755)
+        local('unzip {f} -d {d}'.format(f=zip_path, d=res_dir))
