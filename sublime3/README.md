@@ -6,3 +6,4 @@
 * VCS Gutter
 * MarkdownEditing
 * Pretty JSON
+* Monokai Extended
