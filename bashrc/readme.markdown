@@ -2,8 +2,8 @@
 
 * add to end of .profile
 
-    . /path/to/dev-setup/bashrc/init.sh
-    . /path/to/dev-setup/bashrc/osx.sh
+    . ~/Dev/dev-setup/bashrc/init.sh
+    . ~/Dev/dev-setup/bashrc/osx.sh
 
 * add to end of .bashrc
 
@@ -14,6 +14,6 @@
 * remove unset $color_prompt
 * add to end of .bashrc
 
-    . /path/to/dev-setup/bashrc/init.sh
-    . /path/to/dev-setup/bashrc/ubuntu.sh
+    . ~/Dev/dev-setup/bashrc/init.sh
+    . ~/Dev/dev-setup/bashrc/ubuntu.sh
     unset $color_prompt
