@@ -4,7 +4,7 @@
 #
 
 sudo port install \
-    postgresql92
+    postgresql92 \
     postgresql92-server \
     postgresql_select
     # mysql55 \
