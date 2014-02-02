@@ -7,10 +7,15 @@ import sys
 import random
 import time
 from functools import partial
+from collections import defaultdict
 
 from fabric.api import task, prompt, local
-from fabric.colors import magenta
+from fabric.colors import magenta, yellow
+
+from maizy_f import to_unicode
+
 note = partial(magenta, bold=True)
+title = partial(yellow, bold=True)
 
 
 @task
@@ -55,3 +60,55 @@ def unzip_all(source_dir='.', dest_dir='.'):
         zip_path = os.path.join(source_dir, zip_file)
         os.makedirs(res_dir, mode=0755)
         local('unzip {f} -d {d}'.format(f=zip_path, d=res_dir))
+
+
+@task
+def find_duplicates(origs, matches=None):
+    """
+    TODO:
+        * more infomative output
+        * additional check by some hash alg
+        *
+    """
+    if matches is None:
+        matches = origs
+    origs = to_unicode(origs)
+    matches = to_unicode(matches)
+
+    report = defaultdict(lambda: {'origs': [], 'matched': []})
+    files_orig = 0
+
+    for root, _, files in os.walk(origs):
+        for orig_file in files:
+            orig_path = os.path.join(root, orig_file)
+            if not os.path.isfile(orig_path):
+                continue
+            files_orig += 1
+            size = os.path.getsize(orig_path)
+            report[size]['origs'].append(orig_path)
+
+    for root, _, files in os.walk(matches):
+        for match_file in files:
+            match_path = os.path.join(root, match_file)
+            if not os.path.isfile(match_path):
+                continue
+            match_size = os.path.getsize(match_path)
+            if match_size in report.keys() and match_path not in report[match_size]['origs']:
+                report[match_size]['matched'].append(match_path)
+
+    report = [(size, group) for size, group in report.iteritems() if len(group['matched']) > 0]
+    report.sort(key=lambda p: p[1]['origs'][0])
+
+    for size, group in report:
+        print(title(', '.join(group['origs'])) + ' ({} bytes)'.format(size))
+        print('\n'.join(group['matched']))
+        print()
+
+    files_matched = reduce(lambda acc, p: acc + len(p[1]['origs']), report, 0)
+    print(note('Statistics'))
+    print(
+        '\tOrig: {o} files\n'
+        '\tMatched: {m} files in {mg} groups\n'
+        '\tNot matched: {n} files\n'.format(o=files_orig, m=files_matched, n=files_orig - files_matched,
+                                            mg=len(report))
+    )
