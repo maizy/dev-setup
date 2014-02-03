@@ -36,7 +36,7 @@ tt,
 }
 
 
-.highlight,
+/* .highlight, */
 .highlight .err,
 .highlight .n,
 .highlight .nb,
@@ -74,6 +74,7 @@ tt,
   border-radius:0 !important; 
 }
 
+/* replace highlight for github */
 .highlight .c,
 .highlight .cm,
 .highlight .cp,
