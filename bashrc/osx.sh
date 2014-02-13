@@ -28,10 +28,8 @@ export CLICOLOR=1
 
 
 # venv
-#export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python2.6
-#export VIRTUALENVWRAPPER_VIRTUALENV=/opt/local/bin/virtualenv-2.6
-#export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--python=/opt/local/bin/python2.6'
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--python=/usr/local/bin/python'
 
-#if [ -f '/opt/local/bin/virtualenvwrapper.sh-2.6' ];then
-#    . /opt/local/bin/virtualenvwrapper.sh-2.6
-#fi
+if [ -f '/usr/local/bin/virtualenvwrapper_lazy.sh' ];then
+    . /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
