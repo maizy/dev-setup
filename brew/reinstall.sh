@@ -30,6 +30,8 @@ brew install cmake
 brew install pcre
 
 brew install maven
+brew install scala
+brew install sbt
 brew install play
 
 brew install nginx
@@ -43,9 +45,6 @@ brew tap homebrew/versions
 function oldpy {
     VER_DOT=$1
     VER=${VER_DOT/./}
-
-    echo $VER_DOT
-    echo $VER
 
     brew install "python$VER"
     ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/python$VER_DOT $HOME/bin/python$VER_DOT
@@ -72,7 +71,6 @@ exit 0
 # TODO migrate
 gnuplot -x11 -qt
 
-bpython_select \
 bzip2 \
 coreutils \
 expat \
@@ -105,17 +103,11 @@ xz \
 zlib \
 zmq \
 
-python26 \
 py26-cython \
 py26-docutils \
 py26-gobject \
-py26-nose \
 py26-openssl \
-py26-pip \
 py26-setuptools \
-py26-virtualenv \
-py26-virtualenv-clone \
-py26-virtualenvwrapper \
 
 py27-cython \
 py27-libxml2 \
@@ -123,20 +115,13 @@ py27-numpy \
 py27-pygments \
 py27-readline \
 py27-setuptools \
-py27-virtualenv \
-py27-virtualenv-clone \
-py27-virtualenvwrapper \
 
 python32 \
 py32-cython \
-py32-lxml \
-py32-pip \
 py32-setuptools \
-py32-virtualenv \
 
 py33-cython \
 py33-setuptools \
-py33-virtualenv \
 
 # faac \
 # ffmpeg \

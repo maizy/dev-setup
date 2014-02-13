@@ -24,3 +24,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 * create or update custom utils in ~/bin
 * TODO
+
+# Notes
+
+* Scala IDEA root `/usr/local/opt/scala/idea`
