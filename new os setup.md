@@ -19,6 +19,8 @@ For some future automatization.
  * language settings + fix rus date formatting
  * paula + smart mode + some fn mode apps
  * dash
+ * Xcode
+ *  `xcode-select --install`
 * pip packages (_TODO_: add .sh setup script)
   * bpython
   * fabric + bin 'fab-2.7'
