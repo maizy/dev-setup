@@ -62,14 +62,11 @@ def unzip_all(source_dir='.', dest_dir='.'):
         local('unzip {f} -d {d}'.format(f=zip_path, d=res_dir))
 
 
+# TODO:
+#     * more infomative output
+#     * additional check by some hash alg
 @task
 def find_duplicates(origs, matches=None):
-    """
-    TODO:
-        * more infomative output
-        * additional check by some hash alg
-        *
-    """
     if matches is None:
         matches = origs
     origs = to_unicode(origs)
