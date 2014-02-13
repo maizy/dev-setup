@@ -87,7 +87,6 @@ py26-virtualenvwrapper \
 
 py27-cython \
 py27-libxml2 \
-py27-nose \
 py27-numpy \
 py27-pygments \
 py27-readline \

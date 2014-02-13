@@ -22,6 +22,7 @@ i $upgrade bpython
 i $upgrade ipython
 i $upgrade lxml
 i $upgrade pep8
+i $upgrade nose
 
 i2 $upgrade fabric
 i2 $upgrade pync
