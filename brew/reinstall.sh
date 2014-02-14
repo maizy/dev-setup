@@ -14,12 +14,11 @@ brew install mercurial
 brew install svn
 
 brew install python3
-ln -sf /usr/local/python ~/bin/python3.3
-pip3 install yolk
 
 brew install python
 ln -sf /usr/local/python ~/bin/python2.7
 pip install yolk
+ln -sf /usr/local/bin/yolk ~/bin/yolk2.7
 
 
 brew install curl --with-ares
@@ -75,6 +74,7 @@ brew tap homebrew/versions
 
 function oldpy {
     VER_DOT=$1
+    VER_MAIN=${1:0:1}
     VER=${VER_DOT/./}
 
     echo -e '\n------------------------\nINSTALL PYTHON '$VER_DOT'\n'
@@ -89,12 +89,16 @@ function oldpy {
     ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/easy_install-$VER_DOT $HOME/bin/easy_install-$VER_DOT
     "easy_install-$VER_DOT" pip
     ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/pip$VER_DOT $HOME/bin/pip$VER_DOT
-    if [ "`which yolk$VER_DOT`" == "" ]; then
-        "pip$VER_DOT" install yolk
+    if [ "$VER_MAIN" == "2" ];then
+        if [ "`which yolk$VER_DOT`" == "" ]; then
+            "pip$VER_DOT" install yolk
+        else
+            echo "skip yolk$VER_DOT, alredy installed"
+        fi
+        ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/yolk $HOME/bin/yolk$VER_DOT
     else
-        echo "skip yolk$VER_DOT, alredy installed"
+        echo 'yolk supported only in py2.x'
     fi
-    ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/yolk $HOME/bin/yolk$VER_DOT
 }
 
 oldpy '2.6'
@@ -103,9 +107,7 @@ oldpy '3.1'
 brew install python32
 ln -sf /usr/local/Cellar/python32/3.2.*/bin/python3.2 ~/bin/python3.2
 ln -sf /usr/local/Cellar/python32/3.2.*/bin/pip-3.2 ~/bin/pip3.2
-~/bin/pip3.2 install yolk
 ln -sf /usr/local/Cellar/python32/3.2.*/bin/easy_install-3.2 ~/bin/easy_install-3.2
-ln -sf /usr/local/Cellar/python32/3.2.*/bin/yolk ~/bin/yolk3.2
 
 exit 0
 
