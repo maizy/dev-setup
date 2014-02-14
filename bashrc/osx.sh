@@ -28,7 +28,7 @@ export CLICOLOR=1
 
 
 # venv
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--python=/usr/local/bin/python'
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--python=/usr/local/bin/python --no-site-packages'
 
 if [ -f '/usr/local/bin/virtualenvwrapper_lazy.sh' ];then
     . /usr/local/bin/virtualenvwrapper_lazy.sh
