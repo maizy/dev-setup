@@ -29,6 +29,7 @@ brew install homebrew/dupes/rsync
 brew install p7zip
 brew install xz
 brew install lzo
+brew install ssh-copy-id
 
 brew install watch
 brew install gnu-getopt
