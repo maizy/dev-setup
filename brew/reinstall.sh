@@ -67,6 +67,7 @@ brew install zmq
 brew install gnutls
 brew install expat
 brew install ncurses
+brew install libmemcached
 
 
 # various python versions
