@@ -83,7 +83,7 @@ function oldpy {
 
     brew install "python$VER"
     ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/python$VER_DOT $HOME/bin/python$VER_DOT
-    if [ "`which easy_install-$VER_DOT`" == "" ]; then
+    if [ ! -f $HOME/bin/easy_install-$VER_DOT ]; then
         wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | "python$VER_DOT"
     else
         echo "skip easy_install-$VER_DOT, alredy installed"
