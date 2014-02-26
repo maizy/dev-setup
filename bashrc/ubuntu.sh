@@ -20,6 +20,13 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;\u@\h\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
 
 # colors
 if [ -x /usr/bin/dircolors ]; then
