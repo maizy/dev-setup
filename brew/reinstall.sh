@@ -58,6 +58,10 @@ brew install postgres
 
 brew install nodejs
 
+brew install boot2docker
+brew install docker
+
+
 brew install libxml2
 brew install libxslt
 brew install libyaml

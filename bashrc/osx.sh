@@ -39,3 +39,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--python=/usr/local/bin/python --no-si
 if [ -f '/usr/local/bin/virtualenvwrapper_lazy.sh' ];then
     . /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
+
+# docker
+export VM_DISK_SIZE=20000
+export DOCKER_HOST=tcp://localhost:4243
