@@ -1,0 +1,87 @@
+#!/usr/bin/python
+# Author: Yuri Ushakov https://github.com/shyssiryuxius
+import sys, os, re, time, locale
+from datetime import timedelta, datetime
+
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+
+def dt_fromtime(t):
+    return datetime(1900, 1, 1).strptime(t, '%H:%M:%S')
+
+def log(s):
+    if False:
+        sys.stderr.write(s)
+        sys.stderr.flush()
+
+def out(s):
+    sys.stdout.write(s)
+def outflush():
+    sys.stdout.flush()
+
+def num(n):
+    return locale.format_string("%d", n, grouping=True)
+
+def _find_line_with_time(f, time_re):
+    while True:
+        line = f.readline()
+        m = time_re.match(line)
+        if m is not None:
+            return m, line, f.tell()
+
+def find_pos(f, dt):
+    time_re = re.compile('^.* (\d{2}:\d{2}:\d{2}).*$')
+    totalsize = os.fstat(f.fileno()).st_size
+    lo_limit = 0
+    hi_limit = totalsize
+    
+    cur_pos = totalsize / 2
+    while True:
+        if lo_limit == hi_limit:
+            return None
+        f.seek(cur_pos)
+        sliced_at = cur_pos
+        m, line, time_pos = _find_line_with_time(f, time_re)
+        corrected_by = time_pos - sliced_at
+        cur_pos = cur_pos + corrected_by
+
+        line_dt = dt_fromtime(m.group(1))
+        found = False
+        if line_dt > dt:
+            hi_limit = cur_pos
+            cur_pos = lo_limit + ((cur_pos - lo_limit) / 2)
+        elif line_dt < dt:
+            lo_limit = cur_pos
+            cur_pos = cur_pos + ((hi_limit - lo_limit) / 2)
+        else:
+            cur_pos = cur_pos - len(line)
+            found = True
+
+        log("%s .. %s  %s +%s\n" % (num(lo_limit), num(hi_limit), num(sliced_at), num(corrected_by)))
+        if found:
+            break
+
+    return cur_pos
+
+def out_range(f, from_pos, to_pos):
+    f.seek(from_pos)
+    while True:
+        to_read = min(16 * 1024, to_pos - f.tell())
+        buf = f.read(to_read)
+        if buf == '':
+            break
+        out(buf)
+
+outflush()
+
+from_dt = dt_fromtime(sys.argv[1])
+to_dt = dt_fromtime(sys.argv[2])
+
+f = open(sys.argv[3], 'r')
+
+frompos = find_pos(f, from_dt)
+topos = find_pos(f, to_dt)
+log("%d .. %d" % (frompos, topos))
+
+out_range(f, frompos, topos)
+
+f.close()
