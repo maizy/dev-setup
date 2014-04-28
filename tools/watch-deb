@@ -1,0 +1,14 @@
+#!/bin/bash
+PKG=$1
+if [ -z "$PKG" ]; then
+    echo "Usage: "`basename $0`" DEB_PKG"
+    exit 1
+fi
+
+echo -n 'Sudo pass: '
+sudo echo 'ok'
+if [ $? != 0 ]; then
+    exit 2
+fi
+
+sudo watch --interval 5 "sudo apt-get update 2>&1 >/dev/null;apt-cache showpkg ${PKG} | head"
