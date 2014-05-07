@@ -1,0 +1,13 @@
+#!/bin/bash
+TARGET_BR=$1
+CUR_BR=`git rev-parse --abbrev-ref HEAD`
+
+git fetch
+git clean -df
+git checkout -f
+if [ -n "$TARGET_BR" ];then
+    git checkout -B "${TARGET_BR}" "origin/${TARGET_BR}"
+    git reset --hard "origin/${TARGET_BR}"
+else
+    git reset --hard "origin/${CUR_BR}"
+fi

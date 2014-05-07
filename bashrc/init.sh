@@ -31,16 +31,6 @@ export LC_ALL="en_US.UTF-8"
 # ----------------------------------------------------
 # functions
 
-# git
-function trust_me_git
-{
-    CUR_BR=`git rev-parse --abbrev-ref HEAD`
-    git fetch
-    git clean -df
-    git co -f
-    git reset --hard "origin/${CUR_BR}"
-}
-
 # navigation
 function cdd {
     builtin \cd "${HOME}/Dev/$@"
