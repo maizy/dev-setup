@@ -11,4 +11,4 @@ if [ $? != 0 ]; then
     exit 2
 fi
 
-sudo watch --interval 5 "sudo apt-get update 2>&1 >/dev/null;apt-cache showpkg ${PKG} | head"
+sudo watch --interval 5 "sudo apt-get update 2>&1 >/dev/null;apt-cache showpkg ${PKG} | head -n 40"
