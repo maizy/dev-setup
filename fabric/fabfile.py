@@ -59,5 +59,5 @@ if maizy:
     del smaizy_fabric
     from smaizy.fabric.exports import *
 
-from maizy_f import netstat, git, service, fs, r, vbox
+from maizy_f import netstat, git, fs, r, vbox
 from maizy_f.root import *
