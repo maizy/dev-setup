@@ -1,12 +1,11 @@
 # _*_ coding: utf-8 _*_
-from functools import partial
-
 from fabric.api import local, task
+from maizy_f import partial_with_doc
 
 
 def create(box_id):
     actions = _create_with_params(add_task=False)
-    return _append_to_tasks({key: partial(func, box_id=box_id) for key, func in actions.iteritems()})
+    return _append_to_tasks({key: partial_with_doc(func, box_id=box_id) for key, func in actions.iteritems()})
 
 
 def _create_with_params(add_task=True):
