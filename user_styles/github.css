@@ -17,7 +17,7 @@ tt,
 #files .file .data .line_numbers,
 .file-box .data .line_numbers {
   padding: 0 6px !important;
-  line-height: 21px !important;
+  line-height: 120% !important;
 }
 
 .highlight,
@@ -32,7 +32,10 @@ tt,
 .blob-line-nums span {
   background: #23241f !important;
   /* font-size: 15px !important; */
-  line-height: 21px !important;
+}
+
+#diff .highlight {
+    line-height: 120% !important;
 }
 
 
@@ -249,3 +252,8 @@ code, pre {
 .repository-content {width: 95% !important}
 .discussion-timeline {width:90% !important}
 */
+
+/* search */
+#code_search_results {
+  width: 140%;
+}
