@@ -1,6 +1,11 @@
 /**
- * Based on http://userstyles.org/styles/71271/github-monokai
+ * GitHub monokai, maizy-edition
  *
+ * Currently tested only in Stylish - https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe
+
+ * Applied for URLs starts with: https://github.com/
+ *
+ * Based on http://userstyles.org/styles/71271/github-monokai
  * License: CC0 1.0 - http://creativecommons.org/publicdomain/zero/1.0/
  */
 
@@ -14,11 +19,6 @@ tt,
   font-size: 11pt !important;
 }
 
-#files .file .data .line_numbers,
-.file-box .data .line_numbers {
-  padding: 0 6px !important;
-  line-height: 120% !important;
-}
 
 .highlight,
 .highlight pre,
@@ -31,11 +31,6 @@ tt,
 .blob-line-nums a,
 .blob-line-nums span {
   background: #23241f !important;
-  /* font-size: 15px !important; */
-}
-
-#diff .highlight {
-    line-height: 120% !important;
 }
 
 
@@ -226,10 +221,6 @@ tt,
   color: #333 !important;
 }
 
-code, pre {
-  line-height: 120% !important;
-}
-
 #files {
   width: 115% !important;
   display: block;
@@ -246,14 +237,17 @@ code, pre {
   background: #23241f !important;
 }
 
-/** all git hub container width */
-/*
-.container {width: 90%}
-.repository-content {width: 95% !important}
-.discussion-timeline {width:90% !important}
-*/
-
 /* search */
 #code_search_results {
   width: 140%;
+}
+
+/** line height */
+#files .file .data .line_numbers,
+.file-box .data .line_numbers {
+  line-height: 14px !important;
+}
+
+#diff .diff-line-code {
+  height: 15px;
 }
