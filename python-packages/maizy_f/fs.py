@@ -4,17 +4,20 @@ from __future__ import print_function, absolute_import, unicode_literals
 
 import os
 import sys
+import re
+import curses.ascii
 import random
 import time
 from functools import partial
 from collections import defaultdict
 
 from fabric.api import task, prompt, local
-from fabric.colors import magenta, yellow
+from fabric.colors import magenta, yellow, red
 
 from maizy_f import to_unicode
 
 note = partial(magenta, bold=True)
+warn = partial(red, bold=True)
 title = partial(yellow, bold=True)
 
 
@@ -109,3 +112,23 @@ def find_duplicates(origs, matches=None):
         '\tNot matched: {n} files\n'.format(o=files_orig, m=files_matched, n=files_orig - files_matched,
                                             mg=len(report))
     )
+
+
+@task
+def check_control_chars(path):
+    path = os.path.expanduser(path)
+    if not os.path.exists(path):
+        print(warn('Path not exists: ') + ' ' + path)
+        return False
+    content = open(path, 'rb').read()
+    line = 0
+    char_pos = 0
+    index = {getattr(curses.ascii, readable_name): readable_name for readable_name in curses.ascii.controlnames}
+    for c in content:
+        if curses.ascii.iscntrl(c) or c == chr(curses.ascii.DEL):
+            print('Control char or DEL at {line}:{pos} => "0x{c:02x}" ({c} - {readable})'
+                  .format(c=ord(c), line=line, pos=char_pos, readable=index.get(ord(c), '? UNKNOWN')))
+        if c == b'\n':
+            line += 1
+        char_pos += 1
+
