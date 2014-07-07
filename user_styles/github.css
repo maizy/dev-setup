@@ -2,11 +2,20 @@
  * GitHub monokai, maizy-edition
  *
  * Currently tested only in Stylish - https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe
-
+ * Check list - https://github.com/maizy/dev-setup/pull/1
  * Applied for URLs starts with: https://github.com/
+ *
  *
  * Based on http://userstyles.org/styles/71271/github-monokai
  * License: CC0 1.0 - http://creativecommons.org/publicdomain/zero/1.0/
+ */
+
+/** 
+ * Markdown colors
+ * 23241f - background
+ * 75715e - gray + default text color
+ * f8f8f2 - white
+ * ... TODO
  */
 
 /**  main font */
@@ -19,8 +28,8 @@ tt,
   font-size: 11pt !important;
 }
 
-
-.highlight,
+/** dark background */
+/*.highlight,*/
 .highlight pre,
 .diff-line-num,
 .diff-line-nums,
@@ -33,8 +42,23 @@ tt,
   background: #23241f !important;
 }
 
+/* reset round border at top & bottom of file */ 
+.file .file-code .highlight {
+  background: #75715e !important;
+}
 
-/* .highlight, */
+.file .file-code div.code-body {
+  background: #23241f !important;
+}
+
+
+/** .highlight, **/
+
+/* default color for rendered markdown  */
+article .highlight pre {
+  color: #75715e !important;
+}
+
 .highlight .err,
 .highlight .n,
 .highlight .nb,
@@ -56,34 +80,29 @@ tt,
 .blob-line-nums span,
 .diff-line-num,
 .diff-line-nums {
-  color:#f8f8f2 !important;
+  color: #f8f8f2 !important;
 }
 
 .highlight span[class] {
-  font-weight:normal !important;
-  font-style:normal !important;
+  font-weight: normal !important;
+  font-style: normal !important;
 }
 
 .diff-line-num, .blob-line-nums { 
   border-right: 1px solid #75715e !important;
 }
 
-.highlight pre {
-  border-radius:0 !important; 
-}
-
-/* replace highlight for github */
 .highlight .c,
 .highlight .cm,
 .highlight .cp,
 .highlight .c1,
 .highlight .cs,
 .highlight .diff-line-code { 
-  color:#75715e !important; 
+  color: #75715e !important;
 }
 
 .highlight .err { 
-  background:#f82167 !important;
+  background: #f82167 !important;
 }
 
 .highlight .k,
@@ -93,8 +112,9 @@ tt,
 .highlight .ow,
 .highlight .gd .diff-line-num span,
 .highlight .gd .diff-line-code {
-  color:#f92672 !important;
+  color: #f92672 !important;
 }
+
 .highlight .kc,
 .highlight .kd,
 .highlight .kp,
@@ -102,8 +122,9 @@ tt,
 .highlight .kt,
 .highlight .no 
 { 
-  color:#66d9ef !important; 
+  color: #66d9ef !important; 
 }
+
 .highlight .na,
 .highlight .nc,
 .highlight .nd,
@@ -113,12 +134,15 @@ tt,
 .highlight .gi .diff-line-code {
   color:#a6e22e !important;
 }
+
 .highlight .ge { 
-  font-style:italic !important;
+  font-style: italic !important;
 }
+
 .highlight .gs { 
-  font-weight:bold !important;
+  font-weight: bold !important;
 }
+
 .highlight .l,
 .highlight .m,
 .highlight .mf,
@@ -127,7 +151,7 @@ tt,
 .highlight .mi,
 .highlight .il,
 .highlight .se { 
-  color:#ae81ff !important;
+  color: #ae81ff !important;
 }
 
 .highlight .ld,
@@ -142,40 +166,40 @@ tt,
 .highlight .sx,
 .highlight .sr,
 .highlight .ss { 
-  color:#e6db74 !important;
+  color: #e6db74 !important;
 }
 
 .highlight .diff-line-code,
 .highlight .gd,
 .highlight .gi { 
-  background:#23241f !important;
+  background: #23241f !important;
 }
 
 .highlight .gd { 
-  color:#f92672 !important;
+  color: #f92672 !important;
 }
 
 .highlight .gi { 
-  color:#a6e22e !important;
+  color: #a6e22e !important;
 }
 
 .highlight .gd .x { 
-  background:#f92672 !important;
+  background: #f92672 !important;
 }
 
 .highlight .gi .x { 
-  background:#a6e22e !important;
+  background: #a6e22e !important;
 }
 
 .highlight .gu { 
-  background:#75715e !important;
+  background: #75715e !important;
 }
 
 .highlight .gu,
 .highlight .gd .x,
 .highlight .gi .x {
-  padding:1px !important;
-  color:#23241f !important;
+  padding: 1px !important;
+  color: #23241f !important;
 }
 
 .highlight .w,
@@ -212,7 +236,6 @@ tt,
 .diff-line-num span,
 .blob-line-nums a,
 .blob-line-nums span {
-  /* font-size: 12px !important; */
   color: #75715e !important;
 }
 
