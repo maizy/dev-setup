@@ -204,19 +204,19 @@ article .highlight pre {
 
 .highlight .w,
 .highlight .gc { 
-  color:#f8f8f2 !important;
+  color: #f8f8f2 !important;
 }
 
 .highlight .gc,
 .highlight .gc .line { 
-  background:#75715e !important;
+  background: #75715e !important;
 }
 
 .highlight-diff-line:hover .diff-line-num,
 .highlight-diff-line:hover .diff-line-num span,
 .highlight-diff-line:hover .diff-line-code,
 [style="background-color: rgb(255, 255, 204);"] { 
-  background:#3b392f !important;
+  background: #3b392f !important;
 }
 
 .file-diff-line,
@@ -263,6 +263,16 @@ article .highlight pre {
 /* search */
 #code_search_results {
   width: 140%;
+}
+
+#code_search_results .highlight,
+#code_search_results .file-box .file-code
+{
+  background: #23241f !important;
+}
+
+#code_search_results .divider .highlight{
+  background: #eaf2f5 !important;
 }
 
 /** line height */
