@@ -7,7 +7,7 @@ test
 
 # Test inlines
 
-`some code`
+bla-bla `some inline code` bla bla.
 
 ```bash
 rm -rf /
