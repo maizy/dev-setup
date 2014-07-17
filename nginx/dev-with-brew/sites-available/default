@@ -1,0 +1,19 @@
+server {
+    listen       80 default;
+    server_name  localhost;
+
+    location / {
+        root   /Users/nikita/Www/localhost/public;
+        #index  index.html index.htm;
+        autoindex on;
+    }
+
+    location = /50x.html {
+        root   html;
+    }
+
+
+    location ~ /\. {
+        deny  all;
+    }
+}
