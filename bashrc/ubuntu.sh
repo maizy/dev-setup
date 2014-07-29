@@ -22,7 +22,7 @@ fi
 
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;\u@\h\a\]$PS1"
+    PS1="\[\e]0;\h:\W\a\]$PS1"
     ;;
 *)
     ;;
