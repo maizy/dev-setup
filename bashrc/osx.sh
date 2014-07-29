@@ -15,9 +15,10 @@ export EDITOR=/usr/bin/nano
 # PS1
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
+# terminal title
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;\u@\h\a\]$PS1"
+    PS1="\[\e]0;\h:\W\a\]$PS1"
     ;;
 *)
     ;;
