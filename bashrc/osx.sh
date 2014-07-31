@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # PATHs
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 # PKG alias
 alias pkgs='brew search'

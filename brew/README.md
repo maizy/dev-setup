@@ -19,6 +19,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 * install python packages trought pip or easy_install
 * may be safely run twice or more
+* `sys_py_packages.sh up` for upgrade
 
 # 4. add_user_bins.sh
 

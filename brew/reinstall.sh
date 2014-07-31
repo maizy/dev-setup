@@ -49,7 +49,7 @@ brew install cmake
 brew install pcre
 
 brew install maven
-brew install scala --with-docs
+brew install scala --with-docs --with-src
 brew install sbt
 brew install play
 
@@ -72,48 +72,6 @@ brew install gnutls
 brew install expat
 brew install ncurses
 brew install libmemcached
-
-
-# various python versions
-
-brew tap homebrew/versions
-
-function oldpy {
-    VER_DOT=$1
-    VER_MAIN=${1:0:1}
-    VER=${VER_DOT/./}
-
-    echo -e '\n------------------------\nINSTALL PYTHON '$VER_DOT'\n'
-
-    brew install "python$VER"
-    ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/python$VER_DOT $HOME/bin/python$VER_DOT
-    if [ ! -f $HOME/bin/easy_install-$VER_DOT ]; then
-        wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | "python$VER_DOT"
-    else
-        echo "skip easy_install-$VER_DOT, alredy installed"
-    fi
-    ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/easy_install-$VER_DOT $HOME/bin/easy_install-$VER_DOT
-    "easy_install-$VER_DOT" pip
-    ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/pip$VER_DOT $HOME/bin/pip$VER_DOT
-    if [ "$VER_MAIN" == "2" ];then
-        if [ "`which yolk$VER_DOT`" == "" ]; then
-            "pip$VER_DOT" install yolk
-        else
-            echo "skip yolk$VER_DOT, alredy installed"
-        fi
-        ln -sf /usr/local/Cellar/python$VER/$VER_DOT.*/bin/yolk $HOME/bin/yolk$VER_DOT
-    else
-        echo 'yolk supported only in py2.x'
-    fi
-}
-
-oldpy '2.6'
-oldpy '3.1'
-
-brew install python32
-ln -sf /usr/local/Cellar/python32/3.2.*/bin/python3.2 ~/bin/python3.2
-ln -sf /usr/local/Cellar/python32/3.2.*/bin/pip-3.2 ~/bin/pip3.2
-ln -sf /usr/local/Cellar/python32/3.2.*/bin/easy_install-3.2 ~/bin/easy_install-3.2
 
 exit 0
 
