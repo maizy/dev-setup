@@ -8,6 +8,16 @@ Host gh
     User git
     IdentityFile ~/.ssh/vcs
 
+Host gist.github.com
+    HostName gist.github.com
+    User git
+    IdentityFile ~/.ssh/vcs
+
+Host gist
+    HostName gist.github.com
+    User git
+    IdentityFile ~/.ssh/vcs
+
 Host bitbucket.org
     HostName bitbucket.org
     User git
