@@ -1,8 +1,13 @@
-# OS X 10.8 Apps
+# OS X 10.9 Apps
 
 * IntelliJ IDEA 12
 * Sublime Text 2
 * Dropbox
+
+# Utils
+
+* [MouseTerm](https://bitheap.org/mouseterm/)
+* [EasySIMBL](https://github.com/norio-nomura/EasySIMBL)
 
 ## Apple AppStore
 * Evernote
