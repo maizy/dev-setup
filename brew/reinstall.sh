@@ -57,6 +57,7 @@ brew install nginx
 brew install postgres
 
 brew install nodejs
+brew install lua
 
 brew install boot2docker
 brew install docker
