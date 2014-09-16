@@ -2,6 +2,7 @@
 # Copyright (c) Nikita Kovaliov, maizy.ru, 2013-2014
 from __future__ import unicode_literals, print_function, absolute_import
 import os
+import sys
 import importlib
 
 from fabric.api import env
@@ -31,7 +32,11 @@ def load_extenders(extenders):
             module.init_env()
 
         # load exports - black magic :)
-        exports = importlib.import_module('.exports', package=name)
+        try:
+            exports = importlib.import_module('{}.exports'.format(name))
+        except ImportError as e:
+            sys.stderr.write('Unable to import {}.exports: {}\n'.format(name, e))
+            continue
         task_modules.update({i: getattr(exports, i) for i in dir(exports) if not i.startswith('_')})
     return task_modules
 
