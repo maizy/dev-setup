@@ -131,4 +131,3 @@ def check_control_chars(path):
         if c == b'\n':
             line += 1
         char_pos += 1
-

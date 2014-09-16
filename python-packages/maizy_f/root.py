@@ -1,5 +1,5 @@
-# _*_ coding: utf-8 _*_
-# Copyright (c) Nikita Kovaliov, maizy.ru, 2013
+# coding: utf-8
+# Copyright (c) Nikita Kovaliov, maizy.ru, 2013-2014
 from __future__ import print_function, absolute_import, unicode_literals
 
 import os
@@ -35,3 +35,12 @@ def pep8l(*args):
             continue
         with lcd(cwd):
             pep8(line)
+
+
+@task
+def env_info():
+    print('Enabled extenders: {}'.format(','.join(env.ENABLED_EXTENDERS)))
+    print()
+    print('Env settings:\n * {}'.format('\n * '.join(
+        '{}={}'.format(k, repr(env[k])) for k in sorted(env.keys()) if k
+    )))

@@ -1,6 +1,9 @@
 # _*_ coding: utf-8 _*_
 import sys
+import os
 from functools import partial
+
+from fabric.api import env
 
 
 def to_unicode(val):
@@ -27,3 +30,8 @@ def partial_with_doc(func, _doc='', *args, **kwargs):
 
 def set_terminal_title(title):
     sys.stdout.write('\x1b]2;{}\x07'.format(to_str(title)))
+
+
+def init_env():
+    env.PEP8_LIST_DIR = os.path.abspath(os.path.expanduser('~/Documents/Pep8_lists'))
+    env.GIT_PRESERVE_BRANCHES = ['master', 'release-candidate']

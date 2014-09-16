@@ -37,4 +37,3 @@ if __name__ == '__main__':
     processed = open(f+'.processed', 'w')
     res = json.dumps(data, ensure_ascii=False, encoding=unicode, indent=4)
     processed.write(res.encode('utf-8'))
-
