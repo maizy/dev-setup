@@ -3,8 +3,6 @@ import sys
 import os
 from functools import partial
 
-from fabric.api import env
-
 
 def to_unicode(val):
     if isinstance(val, str):
@@ -32,6 +30,6 @@ def set_terminal_title(title):
     sys.stdout.write('\x1b]2;{}\x07'.format(to_str(title)))
 
 
-def init_env():
+def init_env(env):
     env.PEP8_LIST_DIR = os.path.abspath(os.path.expanduser('~/Documents/Pep8_lists'))
     env.GIT_PRESERVE_BRANCHES = ['master', 'release-candidate']

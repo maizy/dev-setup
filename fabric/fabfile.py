@@ -16,7 +16,7 @@ for module in EXTENDERS:
         pass
 
 # settings
-env.DEV_DIR = os.path.expanduser('~/Dev')
+env.DEV_ROOT = os.path.expanduser('~/Dev')
 env.ENABLED_EXTENDERS = _ENABLED_EXTENDERS.keys()
 
 # fabric settings
@@ -29,7 +29,12 @@ def load_extenders(extenders):
     task_modules = {}
     for name, module in extenders.iteritems():
         if hasattr(module, 'init_env') and callable(module.init_env):
-            module.init_env()
+            try:
+                module.init_env(env)
+            except Exception as e:
+                sys.stderr.write('Errors on init {name}. WARN: state may be inconsistent!\n{e.__class__}: {e}\n'
+                                 .format(name=name, e=e))
+                continue
 
         # load exports - black magic :)
         try:
