@@ -51,7 +51,8 @@ brew install pcre
 brew install maven
 brew install scala --with-docs --with-src
 brew install sbt
-brew install play
+brew install play22
+brew install typesafe-activator
 
 brew install nginx
 brew install postgres
