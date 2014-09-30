@@ -7,7 +7,7 @@ import importlib
 
 from fabric.api import env
 
-EXTENDERS = ['maizy_f', 'hh_kovalev.fabric', 'smaizy.fabric'] + filter(None, os.getenv('F_EXTENDERS', '').split(','))
+EXTENDERS = ['maizy_f', 'hh_kovalev.f', 'smaizy.fabric'] + filter(None, os.getenv('F_EXTENDERS', '').split(','))
 _ENABLED_EXTENDERS = {}
 for module in EXTENDERS:
     try:

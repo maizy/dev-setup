@@ -1,7 +1,11 @@
 # _*_ coding: utf-8 _*_
+from __future__ import print_function, unicode_literals
+
 import sys
 import os
 from functools import partial
+
+from fabric.colors import magenta, yellow
 
 
 def to_unicode(val):
@@ -33,3 +37,11 @@ def set_terminal_title(title):
 def init_env(env):
     env.PEP8_LIST_DIR = os.path.abspath(os.path.expanduser('~/Documents/Pep8_lists'))
     env.GIT_PRESERVE_BRANCHES = ['master', 'release-candidate']
+
+
+def print_title(text):
+    print(yellow(text, bold=True))
+
+
+def print_note(text):
+    print(magenta(text))
