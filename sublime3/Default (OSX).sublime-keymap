@@ -1,14 +1,22 @@
 [
-        { "keys": ["super+e"], 
+        { 
+            "keys": ["super+e"], 
             "command": "run_macro_file", 
             "args": {"file": "Packages/Default/Delete Line.sublime-macro"} 
         },
 
-        { "keys": ["super+d"], 
+        { 
+            "keys": ["super+d"], 
             "command": "duplicate_line" },
 
-        { "keys": ["super+shift+d"], 
+        { 
+            "keys": ["super+shift+d"], 
             "command": "complete",
             "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] 
+        },
+
+        { 
+            "keys": ["super+shift+a"], 
+            "command": "prompt_add_folder",
         }
 ]
