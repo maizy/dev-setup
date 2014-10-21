@@ -41,6 +41,8 @@ brew install iftop
 brew install httperf
 brew install netcat
 brew install memtester
+brew install pt
+brew install ag
 
 brew install autoconf
 brew install automake
@@ -76,31 +78,3 @@ brew install ncurses
 brew install libmemcached
 
 exit 0
-
-# TODO migrate
-gnuplot -x11 -qt
-
-coreutils \
-zlib \
-
-makepasswd \
-popt \
-pypy \
-
-
-py26-gobject \
-py26-openssl \
-
-py27-numpy \
-
-
-
-# faac \
-# ffmpeg \
-# lame \
-# mysql55 \
-# mysql55-server \
-# mysql_select \
-# postgresql92 \
-# postgresql92-server \
-# postgresql_select \

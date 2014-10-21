@@ -31,8 +31,9 @@ i $upgrade pep8
 i $upgrade nose
 i $upgrade virtualenv
 i $upgrade docutils
-i $upgrade docutils
 i $upgrade virtualenvwrapper
+i $upgrade pythonpy
+i $upgrade httpie
 
 i2 $upgrade fabric
 i2 $upgrade pync
