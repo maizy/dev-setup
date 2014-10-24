@@ -4,8 +4,11 @@ from __future__ import print_function, absolute_import, unicode_literals
 
 import os
 from os import path
+import socket
 
 from fabric.api import task, settings, env, local, lcd
+
+from maizy_f import print_title
 
 
 @task
@@ -44,3 +47,16 @@ def env_info():
     print('Env settings:\n * {}'.format('\n * '.join(
         '{}={}'.format(k, repr(env[k])) for k in sorted(env.keys()) if k
     )))
+
+
+@task
+def resolve(domain):
+    print_title('system resolve (hosts, dns ...)')
+    try:
+        print(socket.gethostbyname(domain))
+    except socket.error as e:
+        print('Unable to resolve {d}: {ec.__name__}: {e}'.format(ec=e.__class__, e=e, d=domain))
+    print()
+
+    print_title('dns resolve (nslookup)')
+    local('nslookup {}'.format(domain))
