@@ -33,6 +33,7 @@ brew install ssh-copy-id
 
 brew install watch
 brew install gnu-getopt
+brew install coreutils
 brew install grep
 
 brew install htop
