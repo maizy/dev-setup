@@ -3,10 +3,13 @@
 mkdir -p /tmp/brew-install
 cd /tmp/brew-install
 
+brew tap telemachus/homebrew-desc
+
 brew install bash
 brew install bash-completion
 brew install mc
 brew install zsh
+brew install brew-desc
 
 brew install git
 brew install tig
