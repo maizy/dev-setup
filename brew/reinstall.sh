@@ -9,6 +9,7 @@ brew install bash
 brew install bash-completion
 brew install mc
 brew install zsh
+brew install zsh-completions
 brew install brew-desc
 
 brew install git
