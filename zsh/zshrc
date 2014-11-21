@@ -40,6 +40,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 ZSH_CUSTOM="$HOME/Dev/dev-setup/zsh/oh-my-zsh_custom"
 
-plugins=(git cdd virtualenvwrapper)
+plugins=(lightgit cdd virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
