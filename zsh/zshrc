@@ -34,7 +34,17 @@ ZSH_CUSTOM="$HOME/Dev/dev-setup/zsh/oh-my-zsh_custom"
 
 export DISABLE_VENV_CD=1
 
-plugins=(lightgit cdd virtualenvwrapper)
+plugins=(lightgit cdd virtualenvwrapper pip)
+
+if [[ -z "$SSH_CLIENT" ]]; then
+    plugins+=(ssh-agent)
+fi
+
+# HOSTSPECIFIC SETUP
+
+if [ -f ~/.zshrc-local ]; then
+    source ~/.zshrc-local
+fi
 
 
 # LAUNCH OH MY ZSH
