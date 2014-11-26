@@ -1,0 +1,7 @@
+# additional ssh-agent keys
+#if [[ -z "$SSH_CLIENT" ]]; then
+#    zstyle :omz:plugins:ssh-agent identities id_rsa vcs
+#fi
+
+# additional ignored usernames
+#SKIPED_USERNAMES+=(mylogin)
