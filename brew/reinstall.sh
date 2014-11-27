@@ -71,7 +71,7 @@ brew install boot2docker
 brew install docker
 
 
-brew install libxml2
+brew install libxml2 --with-python
 brew install libxslt
 brew install libyaml
 brew install openssl
