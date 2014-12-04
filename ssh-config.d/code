@@ -8,6 +8,12 @@ Host gh
     User git
     IdentityFile ~/.ssh/vcs
 
+Host github_tunnel
+    HostName 127.0.0.2
+    User git
+    Port 22222
+    IdentityFile ~/.ssh/vcs
+
 Host gist.github.com
     HostName gist.github.com
     User git
