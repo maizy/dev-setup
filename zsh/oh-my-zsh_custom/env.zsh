@@ -17,10 +17,6 @@ export EDITOR=/usr/bin/nano
 if [[ `uname` == 'Darwin' ]]; then
     export PATH="${HOME}/bin:/usr/local/sbin:/usr/local/bin:${PATH}"
 
-    #docker
-    export VM_DISK_SIZE=20000
-    export DOCKER_HOST=tcp://localhost:4243
-
 # linux specific
 elif [[ `uname` == 'Linux' ]]; then
     export PATH="${HOME}/bin:${PATH}"

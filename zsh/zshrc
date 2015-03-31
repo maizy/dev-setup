@@ -1,7 +1,3 @@
-if [ -f ~/.zshrc-local ]; then
-    source ~/.zshrc-local
-fi
-
 # brew completion
 if [[ `uname` == 'Darwin' ]]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
