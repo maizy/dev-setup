@@ -9,6 +9,7 @@ import socket
 from fabric.api import task, settings, env, local, lcd
 
 from maizy_f import print_title
+from maizy_f.ssh_tunnel import ssh_tunnel
 
 
 @task
