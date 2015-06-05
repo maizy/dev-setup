@@ -6,4 +6,6 @@
 * VCS Gutter
 * MarkdownEditing
 * Pretty JSON
-* Monokai Extended
+* SortBy
+* TrailingSpaces
+* Dictionaries
