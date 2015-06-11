@@ -1,4 +1,7 @@
 {
-    "color_scheme": "Packages/User/Byworded-Dark.tmTheme",
-    "wrap_width": 90
+    "draw_centered": true,
+    "word_wrap": false,
+    "rulers": [80, 120],
+    "line_numbers": true,
+    "color_scheme": "Packages/User/Byworded-Dark.tmTheme"
 }
