@@ -1,4 +1,4 @@
-# _*_ coding: utf-8 _*_
+# coding: utf-8
 # Copyright (c) Nikita Kovaliov, maizy.ru, 2013
 from __future__ import print_function, absolute_import, unicode_literals
 

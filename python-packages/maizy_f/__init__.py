@@ -1,9 +1,10 @@
-# _*_ coding: utf-8 _*_
+# coding: utf-8
 from __future__ import print_function, unicode_literals
 
 import sys
 import os
 from functools import partial
+import re
 
 from fabric.colors import magenta, yellow
 
@@ -45,3 +46,9 @@ def print_title(text):
 
 def print_note(text):
     print(magenta(text))
+
+
+def natural_sort(seq):
+    convert = lambda text: int(text) if text.isdigit() else text.lower()
+    alphanum_key = lambda key: [convert(c) for c in re.split(br'([0-9]+)', key)]
+    return sorted(seq, key=alphanum_key)

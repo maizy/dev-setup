@@ -1,4 +1,4 @@
-# _*_ coding: utf-8 _*_
+# coding: utf-8
 from fabric.api import local, task
 from maizy_f import partial_with_doc
 

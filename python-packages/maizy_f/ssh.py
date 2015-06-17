@@ -1,12 +1,15 @@
-# _*_ coding: utf-8 _*_
+# coding: utf-8
+# Copyright (c) Nikita Kovaliov, maizy.ru, 2015
+
 from __future__ import print_function, unicode_literals
 import socket
 import re
+import os
 
 from fabric.api import task, local, settings, hide
 from fabric.colors import yellow, blue, red
 
-from maizy_f import print_title
+from maizy_f import print_title, natural_sort
 
 
 def is_local_port_available(port):
@@ -21,7 +24,7 @@ def is_local_port_available(port):
 
 
 @task
-def ssh_tunnel(ssh_proxy_host, remote_host_and_port, local_port):
+def tunnel(ssh_proxy_host, remote_host_and_port, local_port):
 
     if remote_host_and_port.count(':') != 1:
         print("remote_host_and_port should be in format 'HOST:PORT'")
@@ -58,3 +61,16 @@ def ssh_tunnel(ssh_proxy_host, remote_host_and_port, local_port):
     print('Web Link: {}'.format(blue('http://127.0.0.1:{}/'.format(local_port))))
     print('Possible PID: {}'.format(tunnel_pid))
     print(yellow('kill {}'.format(tunnel_pid)))
+
+
+@task
+def aliases():
+    aliases = []
+    with open(os.path.expanduser('~/.ssh/config'), 'rb') as f:
+        for line in f:
+            stripped = line.strip()
+            if stripped.startswith('Host '):
+                aliases.append(stripped[len('Host '):].strip())
+    aliases = natural_sort(aliases)
+    print_title('SSH aliases')
+    print('\n'.join(aliases))
