@@ -5,10 +5,13 @@ from __future__ import print_function, absolute_import, unicode_literals
 import os
 from os import path
 import socket
+import random
+import urllib2
+import re
 
-from fabric.api import task, settings, env, local, lcd
+from fabric.api import task, settings, env, local, lcd, hide
 
-from maizy_f import print_title
+from maizy_f import print_title, print_note
 
 
 @task
@@ -60,3 +63,45 @@ def resolve(domain):
 
     print_title('dns resolve (nslookup)')
     local('nslookup {}'.format(domain))
+
+
+@task
+def randtext(only_text=False):
+    #
+    #               ж: )
+    #
+    base_url = b'aHR0cHM6Ly9yZWZlcmF0cy55YW5kZXgucnUvcmVmZXJhdHMvd3JpdGUv\n'.decode('base64')
+    themes = [b'YXN0cm9ub215\n', b'Z2VvbG9neQ==\n', b'Z3lyb3Njb3Bl\n', b'bGl0ZXJhdHVyZQ==\n', b'bWFya2V0aW5n\n',
+              b'bWF0aGVtYXRpY3M=\n', b'bXVzaWM=\n', b'cG9saXQ=\n', b'YWdyb2Jpb2xvZ2lh\n', b'bGF3\n',
+              b'cHN5Y2hvbG9neQ==\n', b'Z2VvZ3JhcGh5\n', b'cGh5c2ljcw==\n', b'cGhpbG9zb3BoeQ==\n', b'Y2hlbWlzdHJ5\n',
+              b'ZXN0ZXRpY2E=\n']
+
+    themes = [s.decode('base64') for s in themes]
+
+    selected_themes = themes[:]
+    random.shuffle(selected_themes)
+    selected_themes = selected_themes[0:random.randint(1, len(themes))]
+
+    url = b'{base}?t={themes}'.format(base=base_url, themes=b'+'.join(selected_themes))
+    res = urllib2.urlopen(url).read()
+
+    def get_parts(tag):
+        matches = re.findall(br'<%s>([^<]+?)</%s>' % (tag, tag), res, re.MULTILINE)
+        if matches:
+            return [s.decode('utf-8') for s in matches]
+        return []
+
+    object_ = get_parts('div')[-1]
+    title = get_parts('strong')[-1]
+    paragraphs = '\n\n'.join(get_parts('p'))
+    if only_text:
+        text = paragraphs
+    else:
+        text = '{o}\n{t}\n\n{p}'.format(o=object_.upper(), t=title, p=paragraphs)
+
+    print_title('Random text generated')
+    print(text)
+    with settings(hide('warnings', 'stdout', 'running'), warn_only=True):
+        local('echo "{}" | pbcopy'.format(text))
+    print('')
+    print_note('text copied to clipboard')
