@@ -5,6 +5,7 @@
     "auto_match_enabled": false,
     "font_size": 17.0,
     "translate_tabs_to_spaces": true,
+    "dictionary": "Packages/User/Russian.dic",
 
     //editor window
     "highlight_modified_tabs": true,
