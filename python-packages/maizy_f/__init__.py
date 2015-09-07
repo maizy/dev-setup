@@ -37,6 +37,7 @@ def set_terminal_title(title):
 
 def init_env(env):
     env.PEP8_LIST_DIR = os.path.abspath(os.path.expanduser('~/Documents/Pep8_lists'))
+    env.DEV_DIR = os.path.abspath(os.path.expanduser('~/Dev'))
     env.GIT_PRESERVE_BRANCHES = ['master', 'release-candidate']
 
 
