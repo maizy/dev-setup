@@ -24,7 +24,13 @@ def is_local_port_available(port):
 
 
 @task
-def tunnel(ssh_proxy_host, remote_host_and_port, local_port):
+def tunnel(ssh_proxy_host = None, remote_host_and_port = None, local_port = None):
+
+    if None in (ssh_proxy_host, remote_host_and_port, local_port):
+        print("\nUsage:")
+        print("f ssh.tunnel:ssh_proxy_host,remote_host_and_port,local_port")
+        print("f ssh.tunnel:prod_host,service1:1234,4321")
+        return 1
 
     if remote_host_and_port.count(':') != 1:
         print("remote_host_and_port should be in format 'HOST:PORT'")
