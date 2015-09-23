@@ -23,7 +23,7 @@
     full-log = %w(80,0,15)%Cred%h %Cblue%an (%ad) %Creset%n%s
 
 [push]
-	default = upstream
+	default = current
 
 [core]
 	editor = nano
