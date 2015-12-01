@@ -1,5 +1,5 @@
 server {
-    server_name   hedgehog.localhost;
+    server_name   keemun.localhost;
     proxy_buffering   off;
     proxy_set_header  X-Real-IP $remote_addr;
     proxy_set_header  X-Scheme $scheme;
