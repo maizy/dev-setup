@@ -25,7 +25,7 @@ pip install yolk
 ln -sf /usr/local/bin/yolk ~/bin/yolk2.7
 
 
-brew install curl --with-ares
+brew install curl --with-c-ares
 brew install wget
 brew install nmap
 brew install mcrypt
