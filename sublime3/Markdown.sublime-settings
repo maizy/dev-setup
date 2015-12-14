@@ -3,5 +3,6 @@
     "word_wrap": false,
     "rulers": [80, 120],
     "line_numbers": true,
+    "auto_match_enabled": false,
     "color_scheme": "Packages/User/Byworded-Dark.tmTheme"
 }
