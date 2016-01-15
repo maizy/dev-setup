@@ -7,4 +7,4 @@ from fabric.api import task, local
 
 @task
 def tcp():
-    local('lsof -i TCP -P | grep -i listen')
+    local('sudo lsof -i TCP -P | grep -i listen')
