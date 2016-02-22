@@ -33,3 +33,6 @@ fi
 PROMPT='
 ${VIRTUALENV}%B%{$fg[$HOST_COLOR]%}$(username)%m%{$reset_color%}%b:%B%{$fg[blue]%}%~%{$reset_color%}%b$(git_custom_status)$(virtualenv_prompt_info)
 $ '
+
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%m"
+ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~"
