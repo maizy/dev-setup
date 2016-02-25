@@ -3,7 +3,7 @@ server {
     server_name  localhost;
 
     location / {
-        root   /Users/nikita/Www/localhost/public;
+        root   /Users/imac/Www/localhost/public;
         #index  index.html index.htm;
         autoindex on;
     }
