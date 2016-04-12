@@ -42,7 +42,7 @@ def tunnel(ssh_proxy_host = None, remote_host_and_port = None, local_port = None
         return 1
 
     ssh_map = "{}:{}:{}".format(local_port, remote_host, remote_port)
-    cmd = 'ssh -N -C -c blowfish -f -L {} {}'.format(ssh_map, ssh_proxy_host)
+    cmd = 'ssh -N -C -f -L {} {}'.format(ssh_map, ssh_proxy_host)
 
     def get_pid():
         with settings(hide('warnings', 'stdout', 'running'), warn_only=True):
