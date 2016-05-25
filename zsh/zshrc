@@ -14,6 +14,7 @@ CASE_SENSITIVE="true"
 
 # how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=7
+DISABLE_AUTO_UPDATE=true
 
 # disable auto-setting terminal title.
 #DISABLE_AUTO_TITLE="true"
