@@ -65,7 +65,7 @@ brew install typesafe-activator
 brew install nginx
 brew install postgres
 
-brew install nodejs
+brew install nvm
 brew install lua
 
 brew install boot2docker
