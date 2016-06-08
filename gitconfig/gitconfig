@@ -1,6 +1,7 @@
 [user]
     name = Nikita Kovaliov
     email = nikita@maizy.ru
+    signingkey = D2A1A949
 
 [alias]
     co = checkout
@@ -23,10 +24,16 @@
     full-log = %w(80,0,15)%Cred%h %Cblue%an (%ad) %Creset%n%s
 
 [push]
-	default = current
+    default = current
 
 [core]
-	editor = nano
+    editor = nano
 
 [color]
     ui = true
+
+[gpg]
+    program = /usr/local/bin/git-gpg-exec.sh
+
+[commit]
+    gpgsign = true
