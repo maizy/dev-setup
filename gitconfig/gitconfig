@@ -6,18 +6,15 @@
 [alias]
     co = checkout
     br = branch
+    df = diff HEAD
     back = reset --hard HEAD^
     softback = reset --soft HEAD^
-    rohard = "!sh -c \"git reset --hard origin/${1}\"; echo '' >/dev/null"
-    rhard = reset --hard
     ci = commit
     st = status
-    su = submodule update
     sum = log --pretty -n 1 --color
     summary = log --pretty -n 1 --color
     glog = !git --no-pager log --format=oneline-author --graph -n 15
     flog = !git --no-pager log --format=full-log --graph --date=short
-    pusht = push --tags
 
 [pretty]
     oneline-author = %Cred%h %Cblue%an %Creset%s
@@ -37,3 +34,6 @@
 
 [commit]
     gpgsign = true
+
+[diff]
+    compactionHeuristic = true
