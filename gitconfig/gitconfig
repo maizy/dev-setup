@@ -7,6 +7,8 @@
     co = checkout
     br = branch
     df = diff HEAD
+    pl = pull
+    ph = push
     back = reset --hard HEAD^
     softback = reset --soft HEAD^
     ci = commit
