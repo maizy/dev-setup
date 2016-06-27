@@ -3,7 +3,8 @@
     "drag_text": false,
     "shift_tab_unindent": true,
     "auto_match_enabled": false,
-    "font_size": 17.0,
+    "font_face": "Fantasque Sans Mono",
+    "font_size": 20.0,
     "translate_tabs_to_spaces": true,
     "dictionary": "Packages/Dictionaries/Russian.dic",
 
