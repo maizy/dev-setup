@@ -17,6 +17,7 @@
     summary = log --pretty -n 1 --color
     glog = !git --no-pager log --format=oneline-author --graph -n 15
     flog = !git --no-pager log --format=full-log --graph --date=short
+    cohist = !git reflog | grep checkout: | head -n 20 | awk '"'"'{print $8}'"'"' | uniq
 
 [pretty]
     oneline-author = %Cred%h %Cblue%an %Creset%s
