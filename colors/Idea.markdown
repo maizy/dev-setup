@@ -5,7 +5,7 @@ Based on Monokai from PyCharm.
 ### Fonts
 
 * Anti-aliased (Grayscale)
-* OS X: Monaco, 16pt, line spacing 1.0
+* OS X: Fantasque Sans Mono, 20pt, line spacing 1.0
 
 ### Colors
 
