@@ -1,3 +1,5 @@
 ## GPG on OS X + git commits verifing
 
-* https://gpgtools.org/
+* install https://gpgtools.org/
+* import key
+* `cp ~/Dev/dev-setup/gpg/git-gpg-exec.sh /usr/local/bin/`
