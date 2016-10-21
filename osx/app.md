@@ -1,9 +1,11 @@
 # macOS Apps
 
-* AppCleaner
+Cask code in comments.
+
+* AppCleaner (appcleaner)
 * Audacity
 * BytecodeViewer
-* Chicken VNC
+* Chicken VNC (chicken)
 * Cyberduck
 * Dash
 * DjVu Reader
@@ -19,7 +21,7 @@
 * GPG Suite
 * IntelliJ IDEA
 * iStat Menus
-* iTerm 3
+* iTerm 3 (iterm2)
 * Keynote
 * Knuff
 * LibreOffice
