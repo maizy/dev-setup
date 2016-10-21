@@ -3,14 +3,11 @@
 mkdir -p /tmp/brew-install
 cd /tmp/brew-install
 
-brew tap telemachus/homebrew-desc
-
 brew install bash
 brew install bash-completion
 brew install mc
 brew install zsh
 brew install zsh-completions
-brew install brew-desc
 
 brew install git
 brew install tig
@@ -20,10 +17,6 @@ brew install svn
 brew install python3
 
 brew install python
-ln -sf /usr/local/python ~/bin/python2.7
-pip install yolk
-ln -sf /usr/local/bin/yolk ~/bin/yolk2.7
-
 
 brew install curl --with-c-ares
 brew install wget
@@ -68,16 +61,11 @@ brew install postgres
 brew install nvm
 brew install lua
 
-brew install boot2docker
-brew install docker
-
-
 brew install libxml2 --with-python
 brew install libxslt
 brew install libyaml
 brew install openssl
 brew install sqlite
-brew install zmq
 brew install gnutls
 brew install expat
 brew install ncurses
