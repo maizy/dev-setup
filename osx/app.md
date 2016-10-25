@@ -1,42 +1,42 @@
 # macOS Apps
 
-Cask code in comments.
+Cask app key in parenthesis.
 
 * AppCleaner (appcleaner)
-* Audacity
+* Audacity (audacity)
 * BytecodeViewer
 * Chicken VNC (chicken)
-* Cyberduck
-* Dash
+* Cyberduck (cyberduck)
+* Dash (dash)
 * DjVu Reader
 * Docker Native
-* Dropbox
-* Evernote
-* Firefox
-* FreeMind
-* GIMP
-* Google Chrome
-* Google Earth
-* GoogleAppEngineLauncher
-* GPG Suite
-* IntelliJ IDEA
-* iStat Menus
+* Dropbox (dropbox)
+* Evernote (evernote)
+* Firefox (firefox)
+* FreeMind (freemind)
+* GIMP (gimp)
+* Google Chrome (google-chrome)
+* Google Earth (google-earth)
+* GoogleAppEngineLauncher (googleappengine)
+* GPG Suite (gpgtools)
+* IntelliJ IDEA (intellij-idea)
+* iStat Menus (istat-menus)
 * iTerm 3 (iterm2)
-* Keynote
-* Knuff
-* LibreOffice
-* Mailplane 3
-* Opera
+* Knuff (knuff)
+* LibreOffice (libreoffice)
+* Mailplane 3 (mailplane)
+* Opera (opera)
 * Remote Desktop Connection
-* Skype
+* Skype (skype)
 * SoundSource
-* Sublime Text 3
-* TimeMachineEditor
-* Tunnelblick
-* Viber
-* Vienna
-* Vine Server
-* VLC
+* Sublime Text 3 (sublime-text)
+* TimeMachineEditor (timemachineeditor)
+* Tunnelblick (tunnelblick)
+* Viber (viber)
+* Vienna (vienna)
+* Vine Server (vine-server)
+* VLC (vlc)
+* Launch Rocket (lunchrocket)
 
 ## AppStore
 
@@ -55,3 +55,4 @@ Cask code in comments.
 * Twitter
 * WiFi Explorer
 * Xcode
+* Keynote
