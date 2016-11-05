@@ -36,7 +36,8 @@ Cask app key in parenthesis.
 * Vienna (vienna)
 * Vine Server (vine-server)
 * VLC (vlc)
-* Launch Rocket (lunchrocket)
+* Launch Rocket (launchrocket)
+* latest JDK (java)
 
 ## AppStore
 
