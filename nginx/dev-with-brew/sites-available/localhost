@@ -11,9 +11,9 @@ server {
         root   html;
     }
 
-    location /status {
-        stub_status;
-    }
+    #location /status {
+    #    stub_status;
+    #}
 
     location ~ /\. {
         deny  all;
