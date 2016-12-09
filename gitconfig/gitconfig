@@ -28,6 +28,7 @@
 
 [core]
     editor = nano
+    ignorecase = false
 
 [color]
     ui = true
