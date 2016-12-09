@@ -9,3 +9,5 @@
 * SortBy
 * TrailingSpaces
 * Dictionaries
+* SyncedSydeBar
+* SideBarEnhancements
