@@ -1,5 +1,7 @@
 # additional ssh-agent keys
 #if [[ -z "$SSH_CLIENT" ]]; then
+#    export SSH_ASKPASS=/usr/local/bin/ssh-askpass
+#    plugins+=(ssh-agent-confirm)
 #    zstyle :omz:plugins:ssh-agent identities id_rsa vcs
 #fi
 

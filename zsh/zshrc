@@ -36,9 +36,6 @@ ZSH_CUSTOM="$HOME/Dev/dev-setup/zsh/oh-my-zsh_custom"
 export DISABLE_VENV_CD=1
 
 plugins=(lightgit cdd virtualenv virtualenvwrapper pip f sbt-no-alias scala)
-if [[ -z "$SSH_CLIENT" ]]; then
-    plugins+=(ssh-agent)
-fi
 
 # HOSTSPECIFIC SETUP
 
