@@ -6,7 +6,7 @@ import socket
 import re
 import os
 
-from fabric.api import task, local, settings, hide
+from fabric.api import task, local, settings, hide, lcd
 from fabric.colors import yellow, blue, red
 
 from maizy_f import print_title, natural_sort
@@ -80,3 +80,20 @@ def aliases():
     aliases = natural_sort(aliases)
     print_title('SSH aliases')
     print('\n'.join(aliases))
+
+@task
+def mkkey(name, email):
+    with lcd('~/.ssh'):
+        local("ssh-keygen -t rsa -b 4096 -C '{}' -f {}".format(email, name))
+        local('mv {0} {0}.old'.format(name))
+        local('openssl pkcs8 -topk8 -v2 des3 -in {0}.old -out {0}'.format(name))
+        local('rm {}.old'.format(name))
+        local('chmod 400 {}'.format(name))
+        print('Public key:')
+        local('cat {}.pub'.format(name))
+    print('\nDone')
+
+@task
+def key(name):
+    local('ssh-add -c ~/.ssh/{}'.format(name))
+    local('ssh-add -l')
