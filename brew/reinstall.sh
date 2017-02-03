@@ -60,6 +60,7 @@ brew install postgres
 
 brew install nvm
 brew install lua
+brew install wine
 
 brew install libxml2 --with-python
 brew install libxslt
@@ -70,5 +71,8 @@ brew install gnutls
 brew install expat
 brew install ncurses
 brew install libmemcached
+
+brew tap theseal/ssh-askpass
+brew install ssh-askpass
 
 exit 0
