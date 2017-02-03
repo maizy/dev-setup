@@ -8,6 +8,12 @@
 * Pretty JSON
 * SortBy
 * TrailingSpaces
-* Dictionaries
 * SyncedSydeBar
 * SideBarEnhancements
+
+Dictionaries:
+
+```
+cd ~/Library/Application Support/Sublime Text 3/Packages
+git clone git@github.com:titoBouzout/Dictionaries
+```
