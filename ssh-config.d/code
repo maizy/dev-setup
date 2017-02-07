@@ -1,36 +1,29 @@
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/vcs
 
 Host gh
     HostName github.com
     User git
-    IdentityFile ~/.ssh/vcs
 
 Host github_tunnel
     HostName 127.0.0.2
     User git
     Port 22222
-    IdentityFile ~/.ssh/vcs
 
 Host gist.github.com
     HostName gist.github.com
     User git
-    IdentityFile ~/.ssh/vcs
 
 Host gist
     HostName gist.github.com
     User git
-    IdentityFile ~/.ssh/vcs
 
 Host bitbucket.org
     HostName bitbucket.org
     User git
-    IdentityFile ~/.ssh/vcs
 
 Host bb
     HostName bitbucket.org
     User git
-    IdentityFile ~/.ssh/vcs
 
