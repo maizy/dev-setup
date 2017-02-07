@@ -9,6 +9,7 @@
     df = diff HEAD
     pl = pull
     ph = push
+    ps = push
     back = reset --hard HEAD^
     softback = reset --soft HEAD^
     ci = commit
