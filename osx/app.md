@@ -28,7 +28,6 @@ Cask app key in parenthesis.
 * Opera (opera)
 * Remote Desktop Connection
 * Skype (skype)
-* SoundSource
 * Sublime Text 3 (sublime-text)
 * TimeMachineEditor (timemachineeditor)
 * Tunnelblick (tunnelblick)
