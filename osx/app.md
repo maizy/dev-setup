@@ -53,7 +53,6 @@ Cask app key in parenthesis.
 * Slack
 * Stuffit Expander
 * The Unarchiver
-* Timing Time Tracker
 * Twitter
 * WiFi Explorer
 * Xcode

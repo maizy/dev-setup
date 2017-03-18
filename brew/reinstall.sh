@@ -22,17 +22,14 @@ brew install curl --with-c-ares
 brew install wget
 brew install nmap
 brew install mcrypt
-brew install homebrew/dupes/rsync
 brew install p7zip
 brew install xz
 brew install lzo
-brew install ssh-copy-id
 
 brew install watch
 brew install gnu-getopt
 brew install gnu-sed
 brew install coreutils
-brew install grep
 
 brew install htop
 brew install iperf
@@ -69,10 +66,6 @@ brew install openssl
 brew install sqlite
 brew install gnutls
 brew install expat
-brew install ncurses
 brew install libmemcached
-
-brew tap theseal/ssh-askpass
-brew install ssh-askpass
 
 exit 0

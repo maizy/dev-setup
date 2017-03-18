@@ -1,32 +1,25 @@
 {
-    //typewriter
-    "drag_text": false,
-    "shift_tab_unindent": true,
-    "auto_match_enabled": false,
-    "font_face": "Fantasque Sans Mono",
-    "font_size": 20.0,
-    "translate_tabs_to_spaces": true,
-    "dictionary": "Packages/Dictionaries/Russian.dic",
-
-    //editor window
-    "highlight_modified_tabs": true,
-    "bold_folder_labels": true,
-    "show_encoding": true,
-    "show_line_endings": true,
-    "show_full_path": true,
-    "word_wrap": false,
-
-    //save automation
-    "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-    "save_on_focus_lost": true,
-
-    //etc
-    "default_line_ending": "unix",
-    "auto_find_in_selection": true,
-
-    "ignored_packages": [
-        "Vintage",
-        "Markdown"
-    ]
+	"auto_find_in_selection": true,
+	"auto_match_enabled": false,
+	"bold_folder_labels": true,
+	"default_line_ending": "unix",
+	"dictionary": "Packages/Dictionaries/Russian.dic",
+	"drag_text": false,
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Fantasque Sans Mono",
+	"font_size": 20.0,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"save_on_focus_lost": true,
+	"shift_tab_unindent": true,
+	"show_encoding": true,
+	"show_full_path": true,
+	"show_line_endings": true,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
 }
