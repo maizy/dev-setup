@@ -19,23 +19,12 @@ function i2 {
     CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib /usr/local/bin/pip install $1 $2
 }
 
-# installed by brew
-#i $upgrade setuptools
-#i $upgrade pip
-
-i $upgrade cython
-i $upgrade bpython
-i $upgrade ipython
-i $upgrade lxml
-i $upgrade pep8
+i2 $upgrade bpython
+i2 $upgrade ipython
+i2 $upgrade pycodestyle
 i $upgrade nose
-i $upgrade virtualenv
-i $upgrade docutils
-i $upgrade virtualenvwrapper
-i $upgrade pythonpy
-i $upgrade httpie
+i2 $upgrade virtualenv
+i2 $upgrade virtualenvwrapper
+i2 $upgrade httpie
 
 i2 $upgrade fabric
-i2 $upgrade pync
-
-python ~/Dev/dev-setup/python-packages/setup.py develop

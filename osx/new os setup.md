@@ -2,33 +2,39 @@
 
 For some future automatization.
 
-* bashrc
+* Xcode
+* ~/Dev
+* .profile
+  * JAVA_HOME
+* ln ~/.profile ~/.zprofile
+* ln -s ~/Dev/dev-setup/gpg/git-gpg-exec.sh /usr/local/bin/git-gpg-exec.sh
+* brew
+* cask
+* zsh
+  * oh my zsh
+  * zsh config
+* app store apps
+* brew cask apps
 * Idea + license
 * Sublime + license
 * Packages
-  * OS X - macports ./reinstall.sh
+  * brew/reinstall.sh
   * Linux - _TODO_
-* ssh-keygen
-* ssh agent
+* ssh keys
+* fonts
+  * FantasqueSansMono
 * git config
 * mc config
 * nano config
+* gpg keys
+* iterm3 config
+* terminal.app config
 * os x:
- * terminal config
- * os x group 'configs', chgrp -R /opt/local/etc 'configs'
- * language settings + fix rus date formatting
- * paula + smart mode + some fn mode apps
- * dash
- * Xcode
- *  `xcode-select --install`
-* pip packages (_TODO_: add .sh setup script)
-  * bpython
-  * fabric + bin 'fab-2.7'
-  * yolk
-  * lxml (? macports)
-* mk-pseudo-rootconfig-dir.sh 
+ * keyboard setup
+ * language & region + fix rus date formatting
+* paula + smart mode + some fn mode apps
+* dash 3
+* python/sys_py_packages.sh
 * ~/bin + alias from tools/
-* play, sbt, scala, scalac + aliases
-* jre/jdk 6 & 7
-* PLAY_HOME, JAVA_HOME
-* nginx - _TODO_: commit configs to dev-setup
+* jre/jdk 8
+* nginx configs
