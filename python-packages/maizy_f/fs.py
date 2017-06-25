@@ -24,6 +24,9 @@ title = partial(yellow, bold=True)
 @task
 def rand_rename(path='.'):
     rpath = os.path.realpath(path)
+    if isinstance(rpath, str):
+        rpath = rpath.decode('utf-8')
+
     files = [f for f in os.listdir(rpath) if not f.startswith('.')]
     print('Are you sure to randomize {n} files in {path} ?'.format(path=rpath, n=len(files)))
     if not prompt('[N/y]') in ('y', 'Y'):
