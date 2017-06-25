@@ -39,6 +39,7 @@ brew install netcat
 brew install memtester
 brew install pt
 brew install ag
+brew install jid
 
 brew install autoconf
 brew install automake
