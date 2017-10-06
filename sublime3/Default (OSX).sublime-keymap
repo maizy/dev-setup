@@ -53,5 +53,5 @@
             { "key": "text", "operator": "regex_contains", "operand": "^(#{1,6}(?!#))|^(-{3,}|={3,})$"},
             { "key": "selector", "operator": "equal", "operand": "text.html.markdown", "match_all": true }
         ]
-    },
+    }
 ]
