@@ -1,3 +1,0 @@
-#compdef cdd
-
-_arguments '*:directories:_files -/ -W "$HOME/codebase"'
