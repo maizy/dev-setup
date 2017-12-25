@@ -11,12 +11,12 @@ function i {
     CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib /usr/local/bin/pip3 install $1 $2
 
     # overwrite all binaries with 2.7 versions
-    CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib /usr/local/bin/pip install $1 $2
+    CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib /usr/local/bin/pip2 install $1 $2
 }
 
 function i2 {
     # overwrite all binaries with 2.7 versions
-    CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib /usr/local/bin/pip install $1 $2
+    CFLAGS=-I$(brew --prefix)/include LDFLAGS=-L$(brew --prefix)/lib /usr/local/bin/pip2 install $1 $2
 }
 
 i2 $upgrade bpython
