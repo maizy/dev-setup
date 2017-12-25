@@ -8,7 +8,7 @@
 * Pretty JSON
 * SortBy
 * TrailingSpaces
-* SyncedSydeBar
+* SyncedSideBar
 * SideBarEnhancements
 
 Dictionaries:
