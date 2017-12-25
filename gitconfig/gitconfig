@@ -5,6 +5,7 @@
 
 [alias]
     co = checkout
+    fa = fetch --all
     br = branch
     df = diff HEAD
     pl = pull
