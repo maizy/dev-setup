@@ -8,6 +8,7 @@ brew install bash-completion
 brew install mc
 brew install zsh
 brew install zsh-completions
+brew install tmux
 
 brew install git
 brew install tig
@@ -54,11 +55,11 @@ brew install typesafe-activator
 brew install ammonite-repl
 
 brew install nginx
-brew install postgres
+# brew install postgres
 
 brew install nvm
 brew install lua
-brew install wine
+# brew install wine
 
 brew install libxml2 --with-python
 brew install libxslt
