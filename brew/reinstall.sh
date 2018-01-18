@@ -70,4 +70,7 @@ brew install gnutls
 brew install expat
 brew install libmemcached
 
+brew install avro-tools
+brew install orc-tools
+
 exit 0
