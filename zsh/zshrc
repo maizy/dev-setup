@@ -47,3 +47,5 @@ fi
 # LAUNCH OH MY ZSH
 source $ZSH/oh-my-zsh.sh
 
+
+alias 'lf=ls -d $PWD/*'
