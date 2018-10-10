@@ -1,7 +1,5 @@
 # macOS Apps
 
-Cask app key in parenthesis.
-
 see `cask-install.sh`
 
 ## AppStore
@@ -11,7 +9,7 @@ see `cask-install.sh`
 * FreeDiskSpace
 * GamePad Companion
 * Mactracker
-* Palua
+* Fluor
 * Read CHM
 * Sip
 * Slack
