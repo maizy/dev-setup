@@ -32,4 +32,4 @@ brew cask install vlc
 brew cask install java
 brew cask install lunchrocket
 brew cask install xquartz
-brew cask install flour
+brew cask install fluor
