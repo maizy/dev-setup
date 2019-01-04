@@ -1,10 +1,36 @@
 # python
-*.py[co]
+__pycache__/
+*.py[cod]
+*$py.class
 
 # IDE
 .idea/
 .project/
 *.iml
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Mac OS X junk
 .AppleDouble
@@ -13,7 +39,6 @@ Icon?
 .Spotlight-V100
 .Trashes
 
-
 # Windows junk
 ehthumbs.db
 Thumbs.db
@@ -21,6 +46,3 @@ Desktop.ini
 
 #virtualenv
 venv/
-
-#trial
-_trial_temp/
