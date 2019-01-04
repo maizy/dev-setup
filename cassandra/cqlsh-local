@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import os
+import sys
+import subprocess
+
+if __name__ == '__main__':
+    project_dir = os.path.dirname(os.path.realpath(__file__))
+    print('> cd ' + project_dir)
+    os.chdir(project_dir)
+    
+    args = 'docker-compose exec cqlsh-local cqlsh cassandra-local'.split(' ') + sys.argv[1:]
+    print('> ' + ' '.join(args))
+    subprocess.run(args)
