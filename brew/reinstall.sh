@@ -15,8 +15,6 @@ brew install tig
 brew install mercurial
 brew install svn
 
-brew install python3
-
 brew install python
 
 brew install curl --with-c-ares
@@ -41,6 +39,7 @@ brew install memtester
 brew install pt
 brew install ag
 brew install jid
+brew install jq
 
 brew install autoconf
 brew install automake
@@ -51,7 +50,6 @@ brew install pcre
 brew install maven
 brew install scala --with-docs --with-src
 brew install sbt
-brew install typesafe-activator
 brew install ammonite-repl
 
 brew install nginx
@@ -61,14 +59,10 @@ brew install nvm
 brew install lua
 # brew install wine
 
-brew install libxml2 --with-python
-brew install libxslt
-brew install libyaml
 brew install openssl
 brew install sqlite
 brew install gnutls
 brew install expat
-brew install libmemcached
 
 brew install avro-tools
 brew install orc-tools

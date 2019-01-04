@@ -15,7 +15,6 @@ see `cask-install.sh`
 * Slack
 * Stuffit Expander
 * The Unarchiver
-* Twitter
 * WiFi Explorer
 * Xcode
 * Keynote
