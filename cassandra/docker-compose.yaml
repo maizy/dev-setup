@@ -5,7 +5,3 @@ services:
     container_name: cassandra-local
     volumes:
       - ~/Data/cassandra-local:/var/lib/cassandra
-  cqlsh-local:
-    image: cassandra:3.11
-    container_name: cqlsh-local
-    entrypoint: /bin/sleep 9999999999999

@@ -8,6 +8,6 @@ if __name__ == '__main__':
     print('> cd ' + project_dir)
     os.chdir(project_dir)
     
-    args = 'docker-compose exec cassandra-local cqlsh localhost'.split(' ') + sys.argv[1:]
+    args = 'docker-compose exec cassandra-local nodetool'.split(' ') + sys.argv[1:]
     print('> ' + ' '.join(args))
     subprocess.run(args)
