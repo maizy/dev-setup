@@ -8,13 +8,10 @@ see `cask-install.sh`
 * Blackmagic Dist Speed Test
 * FreeDiskSpace
 * GamePad Companion
+* Keynote
 * Mactracker
-* Fluor
-* Read CHM
 * Sip
-* Slack
 * Stuffit Expander
 * The Unarchiver
 * WiFi Explorer
 * Xcode
-* Keynote
