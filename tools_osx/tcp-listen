@@ -1,0 +1,2 @@
+#!/bin/sh
+lsof +c 15 -n -P -iTCP -sTCP:LISTEN "$@"
