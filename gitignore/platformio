@@ -1,0 +1,26 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.idea/
+.project/
+*.iml
+
+# Mac OS X junk
+.AppleDouble
+.DS_Store
+Icon?
+.Spotlight-V100
+.Trashes
+
+# Windows junk
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# platformio
+.pio
+.pioenvs
+.piolibdeps
