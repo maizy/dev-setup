@@ -15,6 +15,7 @@ brew cask install \
     intellij-idea \
     iterm2 \
     libreoffice \
+    miniconda \
     sublime-text \
     timemachineeditor \
     tunnelblick \
