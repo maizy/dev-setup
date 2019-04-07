@@ -1,8 +1,5 @@
 #!/bin/bash
 
-mkdir -p /tmp/brew-install
-cd /tmp/brew-install
-
 brew install bash
 brew install bash-completion
 brew install mc
@@ -16,6 +13,7 @@ brew install mercurial
 brew install svn
 
 brew install python
+brew install python@2
 
 brew install curl --with-c-ares
 brew install wget
@@ -41,6 +39,8 @@ brew install ag
 brew install jid
 brew install jq
 
+brew install docker-compose
+
 brew install autoconf
 brew install automake
 brew install cmake
@@ -53,11 +53,9 @@ brew install sbt
 brew install ammonite-repl
 
 brew install nginx
-# brew install postgres
 
 brew install nvm
 brew install lua
-# brew install wine
 
 brew install openssl
 brew install sqlite
@@ -66,5 +64,3 @@ brew install expat
 
 brew install avro-tools
 brew install orc-tools
-
-exit 0
