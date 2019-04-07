@@ -35,7 +35,7 @@ ZSH_CUSTOM="$HOME/Dev/dev-setup/zsh/oh-my-zsh_custom"
 
 export DISABLE_VENV_CD=1
 
-plugins=(lightgit cdd pip f sbt-no-alias scala sudo httpie)
+plugins=(lightgit cdd f sbt-no-alias scala httpie)
 
 # HOSTSPECIFIC SETUP
 
@@ -49,3 +49,4 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias 'lf=ls -d $PWD/*'
+compdef nbrew='brew'
