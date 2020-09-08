@@ -10,8 +10,6 @@ see `cask-install.sh`
 * GamePad Companion
 * Keynote
 * Mactracker
-* Sip
-* Stuffit Expander
 * The Unarchiver
 * WiFi Explorer
 * Xcode

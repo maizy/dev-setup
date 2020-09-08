@@ -13,9 +13,8 @@ brew install mercurial
 brew install svn
 
 brew install python
-brew install python@2
 
-brew install curl --with-c-ares
+brew install curl
 brew install wget
 brew install nmap
 brew install mcrypt
@@ -38,8 +37,6 @@ brew install pt
 brew install ag
 brew install jid
 brew install jq
-
-brew install docker-compose
 
 brew install autoconf
 brew install automake
