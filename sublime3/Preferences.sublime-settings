@@ -3,11 +3,15 @@
 	"auto_match_enabled": false,
 	"bold_folder_labels": true,
 	"default_line_ending": "unix",
-	"dictionary": "Packages/Dictionaries/Russian.dic",
+	"dictionary": "Packages/Dictionaries/Russian-English Bilingual.dic",
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+	],
 	"font_face": "Fantasque Sans Mono",
-	"font_size": 20.0,
+	"font_size": 21.0,
+	"font_options": ["no_liga", "no_clig", "no_calt"],
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
