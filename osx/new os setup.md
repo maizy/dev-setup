@@ -34,7 +34,5 @@ For some future automatization.
  * language & region + fix rus date formatting
 * paula + smart mode + some fn mode apps
 * dash 3
-* python/sys_py_packages.sh
 * ~/bin + alias from tools/
 * jre/jdk 8
-* nginx configs
