@@ -5,6 +5,6 @@ setup(
     version='0.1',
     packages=['maizy_f'],
     install_requires=[
-        'humanize',
+        'humanize==0.5.1',
     ],
 )
