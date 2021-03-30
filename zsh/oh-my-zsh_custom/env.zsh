@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # go
-export GOPATH="${HOME}/Dev/go_ext:${HOME}/Dev/go"
+export GOPATH="${HOME}/Dev/go"
 
 # venv (+ os specific bellow)
 export WORKON_HOME=~/Dev/venv
