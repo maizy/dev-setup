@@ -22,3 +22,4 @@ gitconfig/local
 *.py[co]
 *.egg-info/
 build/
+dist/
