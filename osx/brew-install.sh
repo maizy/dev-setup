@@ -26,6 +26,10 @@ brew install watch
 brew install gnu-getopt
 brew install gnu-sed
 brew install coreutils
+brew install grep
+
+brew install pgrep
+brew unlink pgrep
 
 brew install htop
 brew install iperf
