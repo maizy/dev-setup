@@ -10,6 +10,9 @@
 * TrailingSpaces
 * SyncedSideBar
 * SideBarEnhancements
+* HOCON Syntax Highlighting
+* MarkdownPreview
+* Show Unicode Name
 
 Dictionaries:
 
