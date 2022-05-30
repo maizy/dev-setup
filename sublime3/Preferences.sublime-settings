@@ -6,9 +6,6 @@
 	"dictionary": "Packages/Dictionaries/Russian-English Bilingual.dic",
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns":
-	[
-	],
 	"font_face": "JetBrains Mono",
 	"font_options":
 	[
@@ -16,7 +13,7 @@
 		"no_clig",
 		"no_calt"
 	],
-	"font_size": 18.0,
+	"font_size": 19.0,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
@@ -31,6 +28,6 @@
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false,
-	"update_check": false
+	"update_check": false,
+	"word_wrap": false
 }
