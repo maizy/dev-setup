@@ -52,3 +52,4 @@ alias 'lf=ls -d $PWD/*'
 if [[ `uname` == 'Darwin' ]]; then
     compdef nbrew='brew'
 fi
+
