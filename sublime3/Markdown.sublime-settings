@@ -1,8 +1,12 @@
 {
-    "draw_centered": true,
-    "word_wrap": false,
-    "rulers": [80, 120],
-    "line_numbers": true,
-    "auto_match_enabled": false,
-    "color_scheme": "Packages/User/Byworded-Dark.tmTheme"
+	"auto_match_enabled": false,
+	"color_scheme": "Packages/User/Byworded-Dark.tmTheme",
+	"draw_centered": true,
+	"line_numbers": true,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"word_wrap": false
 }
