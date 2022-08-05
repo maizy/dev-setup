@@ -1,25 +1,38 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # Author: Yuri Ushakov https://github.com/shyssiryuxius
-import sys, os, re, time, locale
-from datetime import timedelta, datetime
+# Python3 port and gzip/bzip2 support - Nikita Kovalev
+
+import sys
+import os
+import re
+import locale
+from datetime import datetime
+import bz2
+import gzip
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+
 
 def dt_fromtime(t):
     return datetime(1900, 1, 1).strptime(t, '%H:%M:%S')
 
+
 def log(s):
-    if False:
-        sys.stderr.write(s)
-        sys.stderr.flush()
+    if True:
+        print(s)
+
 
 def out(s):
     sys.stdout.write(s)
+
+
 def outflush():
     sys.stdout.flush()
 
+
 def num(n):
     return locale.format_string("%d", n, grouping=True)
+
 
 def _find_line_with_time(f, time_re):
     while True:
@@ -28,13 +41,14 @@ def _find_line_with_time(f, time_re):
         if m is not None:
             return m, line, f.tell()
 
+
 def find_pos(f, dt):
-    time_re = re.compile('^.* (\d{2}:\d{2}:\d{2}).*$')
+    time_re = re.compile(r'^.* (\d{2}:\d{2}:\d{2}).*$')
     totalsize = os.fstat(f.fileno()).st_size
     lo_limit = 0
     hi_limit = totalsize
     
-    cur_pos = totalsize / 2
+    cur_pos = totalsize // 2
     while True:
         if lo_limit == hi_limit:
             return None
@@ -48,10 +62,10 @@ def find_pos(f, dt):
         found = False
         if line_dt > dt:
             hi_limit = cur_pos
-            cur_pos = lo_limit + ((cur_pos - lo_limit) / 2)
+            cur_pos = lo_limit + ((cur_pos - lo_limit) // 2)
         elif line_dt < dt:
             lo_limit = cur_pos
-            cur_pos = cur_pos + ((hi_limit - lo_limit) / 2)
+            cur_pos = cur_pos + ((hi_limit - lo_limit) // 2)
         else:
             cur_pos = cur_pos - len(line)
             found = True
@@ -62,6 +76,7 @@ def find_pos(f, dt):
 
     return cur_pos
 
+
 def out_range(f, from_pos, to_pos):
     f.seek(from_pos)
     while True:
@@ -71,12 +86,21 @@ def out_range(f, from_pos, to_pos):
             break
         out(buf)
 
-outflush()
+
+if len(sys.argv) < 4:
+    print(f'Usage: {os.path.basename(__file__)} HH:MM:SS HH:MM:SS file')
+    exit(1)
 
 from_dt = dt_fromtime(sys.argv[1])
 to_dt = dt_fromtime(sys.argv[2])
+file_path = sys.argv[3]
 
-f = open(sys.argv[3], 'r')
+if file_path.endswith('.gz'):
+    f = gzip.open(file_path, 'rt')
+if file_path.endswith('.bz2') or file_path.endswith('.bzip2'):
+    f = bz2.open(file_path, 'rt')
+else:
+    f = open(file_path, 'rt')
 
 frompos = find_pos(f, from_dt)
 topos = find_pos(f, to_dt)
