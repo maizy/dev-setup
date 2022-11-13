@@ -1,7 +1,7 @@
 [user]
     name = Nikita Kovalev
-    email = nikita@maizy.ru
-    signingkey = D2A1A949
+    email = nikita@maizy.dev
+    signingkey = F997FD1F97EE3819BAF5AC49E7312D92BE8F1498
 
 [alias]
     co = checkout
