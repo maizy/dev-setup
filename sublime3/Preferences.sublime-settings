@@ -3,7 +3,7 @@
 	"auto_match_enabled": false,
 	"bold_folder_labels": true,
 	"default_line_ending": "unix",
-	"dictionary": "Packages/Dictionaries/Russian-English Bilingual.dic",
+	"dictionary": "Packages/Dictionaries/Russian.dic",
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "JetBrains Mono",
@@ -13,13 +13,13 @@
 		"no_clig",
 		"no_calt"
 	],
-	"font_size": 19.0,
+	"font_size": 16.0,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Markdown",
 		"Vintage"
 	],
+	"index_files": true,
 	"save_on_focus_lost": true,
 	"shift_tab_unindent": true,
 	"show_encoding": true,
