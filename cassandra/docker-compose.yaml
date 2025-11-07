@@ -1,7 +1,0 @@
-version: '3'
-services:
-  cassandra-local:
-    image: cassandra:3.11
-    container_name: cassandra-local
-    volumes:
-      - ~/Data/cassandra-local:/var/lib/cassandra

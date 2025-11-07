@@ -1,3 +1,3 @@
-## My dev setup
+# My dev setup
 
 Nothing interesting here.
