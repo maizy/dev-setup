@@ -1,0 +1,1 @@
+command -v scloud >/dev/null 2>&1 && eval "$(scloud --shell zsh)"

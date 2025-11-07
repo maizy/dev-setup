@@ -5,10 +5,6 @@ export LC_ALL="en_US.UTF-8"
 # go
 export GOPATH="${HOME}/Dev/go"
 
-# venv (+ os specific bellow)
-export WORKON_HOME=~/Dev/venv
-export PROJECT_HOME=~/Dev/venv_projects
-export VIRTUALENVWRAPPER_HOOK_DIR=~/Dev/venv_hooks
 
 # editors (+ os specific bellow)
 export EDITOR=/usr/bin/nano
@@ -24,5 +20,4 @@ elif [[ `uname` == 'Linux' ]]; then
     # editors
     export SELECT_EDITOR='nano'
     export VISUAL='nano'
-    export SVN_EDITOR='nano'
 fi
