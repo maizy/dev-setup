@@ -35,7 +35,7 @@ ZSH_CUSTOM="$HOME/Dev/dev-setup/zsh/oh-my-zsh_custom"
 
 export DISABLE_VENV_CD=1
 
-plugins=(lightgit cdd f sbt-no-alias scala httpie)
+plugins=(lightgit cdd)
 
 # HOSTSPECIFIC SETUP
 
@@ -52,4 +52,3 @@ alias 'lf=ls -d $PWD/*'
 if [[ `uname` == 'Darwin' ]]; then
     compdef nbrew='brew'
 fi
-

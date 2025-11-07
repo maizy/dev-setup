@@ -1,10 +1,15 @@
-# additional ssh-agent keys
+# additional ssh-agent keys (linux)
 #if [[ -z "$SSH_CLIENT" ]]; then
 #    export SSH_ASKPASS=/usr/local/bin/ssh-askpass
 #    plugins+=(ssh-agent-confirm)
 #    zstyle :omz:plugins:ssh-agent identities id_rsa vcs
 #fi
 
+# additional ssh-agent keys (macOS)
+#ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
 # additional ignored usernames
 #SKIPED_USERNAMES+=(mylogin)
-#plugins+=(virtualenv virtualenvwrapper)
+
+# additional plugins
+#plugins+=(docker uv-venv)
