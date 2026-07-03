@@ -1,0 +1,49 @@
+scrollback-limit = 50000000
+working-directory = ~/Dev
+
+font-family = Courier New
+font-size = 20
+sidebar-font-size = 18
+surface-tab-bar-font-size = 15
+cursor-style = bar
+
+# not supported by cmux yet
+# split-divider-color = #ff0000
+
+theme = One Dark
+background =#101010
+foreground =#00ff00
+# ANSI 0: black
+palette = 0=#6C737A
+# ANSI 1: red
+palette = 1=#FF3A24
+# ANSI 2: green
+palette = 2=#8CE032
+# ANSI 3: yellow
+palette = 3=#FFE03A
+# ANSI 4: blue
+palette = 4=#68B4F0
+# ANSI 5: magenta
+palette = 5=#C59BD0
+# ANSI 6: cyan
+palette = 6=#24EAF2
+# ANSI 7: white
+palette = 7=#F7F8F3
+# ANSI 8: bright black
+palette = 8=#929C92
+# ANSI 9: bright red
+palette = 9=#FF6F68
+# ANSI 10: bright green
+palette = 10=#CFFF7C
+# ANSI 11: bright yellow
+palette = 11=#FFF59A
+# ANSI 12: bright blue
+palette = 12=#B3D8FA
+# ANSI 13: bright magenta
+palette = 13=#E5BCE4
+# ANSI 14: bright cyan
+palette = 14=#99F7FF
+# ANSI 15: bright white
+palette = 15=#FFFFFF
+palette-generate = true
+palette-harmonious = true
