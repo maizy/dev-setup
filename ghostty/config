@@ -1,8 +1,8 @@
 scrollback-limit = 50000000
 working-directory = ~/Dev
 
-font-family = Courier New
-font-size = 20
+font-family = JetBrains Mono Light
+font-size = 18
 sidebar-font-size = 18
 surface-tab-bar-font-size = 15
 cursor-style = bar
