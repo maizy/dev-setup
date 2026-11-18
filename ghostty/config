@@ -8,9 +8,8 @@ surface-tab-bar-font-size = 15
 cursor-style = bar
 
 # not supported by cmux yet
-# split-divider-color = #ff0000
+split-divider-color = #00ff00
 
-theme = One Dark
 background =#101010
 foreground =#00ff00
 # ANSI 0: black
