@@ -1,0 +1,21 @@
+{
+  "manifestVersion": 2,
+  "id": "monokai-maizy-edition",
+  "name": "Monokai Maizy Edition",
+  "version": "1.0.0",
+  "description": "Classic Orca Monokai UI with editor colors from the IntelliJ Monokai-maizy-edition scheme.",
+  "license": "MIT",
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "execution": "data",
+  "contributes": {
+    "themes": [
+      {
+        "id": "monokai-maizy-edition",
+        "title": "Monokai Maizy Edition",
+        "path": "themes/monokai-maizy.json"
+      }
+    ]
+  }
+}
