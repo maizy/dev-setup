@@ -1,0 +1,40 @@
+font-family = JetBrains Mono Light
+font-size = 18
+cursor-style = bar
+
+split-divider-color = #00ff00
+
+background =#101010
+foreground =#00ff00
+# ANSI 0: black
+palette = 0=#494E54
+# ANSI 1: red
+palette = 1=#D71E00
+# ANSI 2: green
+palette = 2=#65AD11
+# ANSI 3: yellow
+palette = 3=#D6B500
+# ANSI 4: blue
+palette = 4=#4284BA
+# ANSI 5: magenta
+palette = 5=#8F6F96
+# ANSI 6: cyan
+palette = 6=#00ADB3
+# ANSI 7: white
+palette = 7=#E0E1DB
+# ANSI 8: bright black
+palette = 8=#6E756E
+# ANSI 9: bright red
+palette = 9=#F7463D
+# ANSI 10: bright green
+palette = 10=#A5E64B
+# ANSI 11: bright yellow
+palette = 11=#FCED66
+# ANSI 12: bright blue
+palette = 12=#8CB6DB
+# ANSI 13: bright magenta
+palette = 13=#C19AC0
+# ANSI 14: bright cyan
+palette = 14=#45E7ED
+# ANSI 15: bright white
+palette = 15=#F3F3ED
